@@ -122,6 +122,83 @@
             </objects>
             <point key="canvasLocation" x="3346" y="545"/>
         </scene>
+        <!--cardsViewController-->
+        <scene sceneID="akm-cE-Y3t">
+            <objects>
+                <tableViewController storyboardIdentifier="cardsViewController" title="cardsViewController" id="u8N-Oj-DNa" customClass="CardsTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TCP-Ui-lnc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="450" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="CatchUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="450"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciP-UC-OoO" id="Cpw-S0-sug">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="449.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-tV-C9W">
+                                            <rect key="frame" x="15" y="17" width="344" height="414.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People sit in circle happily" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-0Y-bxq">
+                                                    <rect key="frame" x="66" y="8" width="270" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-xm-v17">
+                                                    <rect key="frame" x="8" y="238" width="326" height="135"/>
+                                                    <string key="text">The pills are commonly used to treat pain, and investigators have brought in the U.S. Drug Enforcement Administration to help with the case, the source said.
+Investigators believe a health scare about a week before Prince's death, which caused an unscheduled landing of his plane in Illinois, was likely the result of a reaction to the pain medication, the official said.
+</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-jz-nvh">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleStory.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
+                                                    <rect key="frame" x="0.0" y="66" width="344" height="164"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr0-ry-jfa">
+                                                    <rect key="frame" x="0.0" y="373" width="171" height="41.5"/>
+                                                    <color key="backgroundColor" red="0.80102666884816753" green="0.80102666884816753" blue="0.80102666884816753" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Save">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oe-R9-iCZ">
+                                                    <rect key="frame" x="172" y="373" width="172" height="41.5"/>
+                                                    <color key="backgroundColor" red="0.80102666879999995" green="0.80102666879999995" blue="0.80102666879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Share">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86626717931937169" green="0.86626717931937169" blue="0.86626717931937169" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="contentLabel" destination="NRG-xm-v17" id="2TH-qT-ZLI"/>
+                                    <outlet property="mainLabel" destination="HQa-0Y-bxq" id="A1t-dd-h2D"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8N-Oj-DNa" id="kCK-E1-JLm"/>
+                            <outlet property="delegate" destination="u8N-Oj-DNa" id="1UT-Nl-vgc"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeK-aA-1Vd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579.5" y="1048.5"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="PIC-Za-HyD">
             <objects>
@@ -160,4 +237,8 @@
             <point key="canvasLocation" x="1062" y="229"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sampleLogo.png" width="100" height="100"/>
+        <image name="sampleStory.jpg" width="2000" height="1000"/>
+    </resources>
 </document>

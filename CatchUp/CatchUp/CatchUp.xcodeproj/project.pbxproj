@@ -21,6 +21,10 @@
 		4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */; };
 		4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */; };
 		4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */; };
+		C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */; };
+		C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */; };
+		C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */; };
+		C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */; };
 		C3E076751CD1E22000AA6CCB /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLogo.png; sourceTree = "<group>"; };
+		C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleStory.jpg; sourceTree = "<group>"; };
 		C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +91,10 @@
 				4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */,
 				4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */,
 				4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */,
+				C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */,
+				C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */,
+				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
+				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
 				4A525D0A1CD1B7FA00CF3D67 /* Info.plist */,
@@ -160,8 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */,
 				4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */,
 				4A525D091CD1B7FA00CF3D67 /* LaunchScreen.storyboard in Resources */,
+				C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */,
 				4A525D061CD1B7FA00CF3D67 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +198,9 @@
 				4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */,
 				4A525D1F1CD1B89900CF3D67 /* Item.swift in Sources */,
 				4A525D1C1CD1B89900CF3D67 /* Section+CoreDataProperties.swift in Sources */,
+				C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */,
 				4A525CFC1CD1B7FA00CF3D67 /* AppDelegate.swift in Sources */,
+				C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,8 @@ class PersonalizedViewController: UIViewController {
     var sections: Array<String> = []
     
     var pageMenu : CAPSPageMenu?
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
 
 
     override func viewDidLoad() {
@@ -43,28 +45,14 @@ class PersonalizedViewController: UIViewController {
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
-        let controller = UIViewController()
-        controller.title = "Sports"
         
-        let controller2 = UIViewController()
-        controller2.title = "Finance"
+        let allSectionsChosen = defaults.objectForKey("sections") as! [String]
         
-        let controller3 = UIViewController()
-        controller3.title = "World"
-        
-        let controller4 = UIViewController()
-        controller4.title = "Technology"
-        
-        let controller5 = UIViewController()
-        controller5.title = "Design"
-        
-        controllerArray.append(controller)
-        controllerArray.append(controller2)
-        controllerArray.append(controller3)
-        controllerArray.append(controller4)
-        controllerArray.append(controller5)
-
-
+        for section in allSectionsChosen {
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("cardsViewController") as! UIViewController
+            vc.title = section
+            controllerArray.append(vc)
+        }
 
         
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
