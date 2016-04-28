@@ -20,23 +20,6 @@ class PersonalizedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-//        let viewController = UIViewController()
-//        viewController.title = "Menu title"
-//        let viewControllers = [viewController]
-//        
-//        let options = PagingMenuOptions()
-//        options.menuItemMargin = 5
-//        options.menuDisplayMode = .SegmentedControl
-//        let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
-//        
-//        self.addChildViewController(pagingMenuController)
-//        self.view.addSubview(pagingMenuController.view)
-//        pagingMenuController.didMoveToParentViewController(self)
-        
-        
-        
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
         

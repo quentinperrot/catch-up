@@ -1,31 +1,28 @@
 //
-//  SectionPickerTableViewController.swift
+//  FeedTableViewController.swift
 //  CatchUp
 //
-//  Created by Quentin Perrot on 4/27/16.
+//  Created by Quentin Perrot on 4/28/16.
 //  Copyright © 2016 Stanford University. All rights reserved.
 //
 
 import UIKit
 
-class SectionPickerTableViewController: UITableViewController {
+class FeedTableViewController: UITableViewController, XMLParserDelegate {
     
+    var xmlParser : XMLParser!
     
-    let defaults = NSUserDefaults.standardUserDefaults()
-    
-    var sectionsDictionary: [String: String] = [
-        "Sports": "All things related to sports in the United States",
-        "Technology": "Insight into all things tech, right from the source",
-        "Design": "An overview of design trends and happenings",
-        "Finance": "A look into market trends and movements globally",
-        "Travel": "Stay up to date with the best destinations"]
-    
-    var sectionsSelected: Set<String> = []
+    func parsingWasFinished() {
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.allowsMultipleSelection = true
+        let url = NSURL(string: "http://feeds.nytimes.com/nyt/rss/Technology")
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingWithContentsOfURL(url!)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,49 +45,44 @@ class SectionPickerTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sectionsDictionary.count
+        return xmlParser.arrParsedData.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        
-        var sectionNames = Array(sectionsDictionary.keys)
-        let sectionName = sectionNames[indexPath.row]
-        let sectionDescription = sectionsDictionary[sectionName]
-        cell.textLabel?.text = sectionName
-        cell.detailTextLabel?.text = sectionDescription
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
 
+        let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        
+        cell.textLabel?.text = currentDictionary["title"]
+        
         return cell
+
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
-        sectionsSelected.insert(Array(sectionsDictionary.keys)[indexPath.row])
-        defaults.setObject(Array(sectionsSelected), forKey: "sections")
-    }
-    
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
-        sectionsSelected.remove(Array(sectionsDictionary.keys)[indexPath.row])
-        defaults.setObject(Array(sectionsSelected), forKey: "sections")
-    }
-    
-    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let limit = 4
-        if let sr = tableView.indexPathsForSelectedRows {
-            if sr.count == limit {
-                let alertController = UIAlertController(title: "Limit Reached", message:
-                    "You are limited to \(limit) topic selections", preferredStyle: .Alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: {action in
-                }))
-                self.presentViewController(alertController, animated: true, completion: nil)
-                
-                return nil
-            }
-        }
+        let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        let link = dictionary["link"]
+        let publishDate = dictionary["pubDate"]
+        let description = dictionary["description"]
         
-        return indexPath
+        print(link)
+        print(publishDate)
+        print(description)
+
+        
+        let articleViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("idArticleViewController") as! ArticleViewController
+        
+        articleViewController.articleURL = NSURL(string: link!)
+        articleViewController.articleDescription = description
+        articleViewController.publishDate = publishDate
+        
+        showDetailViewController(articleViewController, sender: self)
+        
     }
 
     /*
@@ -128,12 +120,14 @@ class SectionPickerTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(defaults.objectForKey("sections"))
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
