@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class CardsTableViewController: UITableViewController {
+class CardsTableViewController: UITableViewController, SFSafariViewControllerDelegate {
     
     var sectionsDictionary: [String: String] = [
         "Sports": "All things related to sports in the United States",
@@ -21,14 +22,19 @@ class CardsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.tableView.rowHeight = 450.0
+        
+        self.edgesForExtendedLayout = UIRectEdge.All
+        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 60.0, right: 0.0)
 
+        
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -57,7 +63,21 @@ class CardsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let svc = SFSafariViewController(URL: NSURL(string: "http://www.google.com")!)
+        svc.delegate = self
+        self.presentViewController(svc, animated: true, completion: nil)
+    }
 
+    func safariViewControllerDidFinish(controller: SFSafariViewController)
+    {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        self.edgesForExtendedLayout = UIRectEdge.All
+        self.tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 60.0, right: 0.0)
+
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
