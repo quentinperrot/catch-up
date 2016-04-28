@@ -67,11 +67,13 @@ class SectionPickerTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
         sectionsSelected.insert(Array(sectionsDictionary.keys)[indexPath.row])
+        defaults.setObject(Array(sectionsSelected), forKey: "sections")
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
         sectionsSelected.remove(Array(sectionsDictionary.keys)[indexPath.row])
+        defaults.setObject(Array(sectionsSelected), forKey: "sections")
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
@@ -131,12 +133,7 @@ class SectionPickerTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let continueButton = sender {
-            if let seguedToMVC = segue.destinationViewController as? PersonalizedViewController {
-                seguedToMVC.sections = Array(sectionsSelected)
-                print(Array(sectionsSelected))
-            }
-        }
+        print(defaults.objectForKey("sections"))
     }
 
 }
