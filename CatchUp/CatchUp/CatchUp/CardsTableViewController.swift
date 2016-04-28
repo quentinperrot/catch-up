@@ -108,7 +108,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
             
-            let seconds = 3.0
+            let seconds = 2.3
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
