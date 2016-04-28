@@ -9,30 +9,55 @@
 import UIKit
 import SafariServices
 
-class CardsTableViewController: UITableViewController, SFSafariViewControllerDelegate {
+class CardsTableViewController: UITableViewController, SFSafariViewControllerDelegate, XMLParserDelegate {
+    
+    var xmlParser : XMLParser!
+    
+    func parsingWasFinished() {
+        self.tableView.reloadData()
+    }
+    
+    var tableRowNumber = 5
     
     var sectionsDictionary: [String: String] = [
-        "Sports": "All things related to sports in the United States",
-        "Technology": "Insight into all things tech, right from the source",
-        "Design": "An overview of design trends and happenings",
-        "Finance": "A look into market trends and movements globally",
-        "Travel": "Stay up to date with the best destinations"]
-
+        "Sports": "http://www.nytimes.com/services/xml/rss/nyt/Sports.xml",
+        "Technology": "http://feeds.nytimes.com/nyt/rss/Technology",
+        "Business": "http://feeds.nytimes.com/nyt/rss/Business",
+        "Science": "http://www.nytimes.com/services/xml/rss/nyt/Science.xml",
+        "Health": "http://www.nytimes.com/services/xml/rss/nyt/Health.xml",
+        "Arts": "http://www.nytimes.com/services/xml/rss/nyt/Arts.xml",
+        "Style": "http://www.nytimes.com/services/xml/rss/nyt/FashionandStyle.xml",
+        "Travel": "http://www.nytimes.com/services/xml/rss/nyt/Travel.xml",
+        "World": "http://www.nytimes.com/services/xml/rss/nyt/World.xml",
+        "Popular": "http://www.nytimes.com/services/xml/rss/nyt/MostViewed.xml",
+        "Trending": "http://www.nytimes.com/services/xml/rss/nyt/MostShared.xml",
+        "Most Shared": "http://www.nytimes.com/services/xml/rss/nyt/pop_top.xml"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.rowHeight = 450.0
         
         self.edgesForExtendedLayout = UIRectEdge.All
-        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 60.0, right: 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:49.0, right: 0.0)
 
+        print(self.title)
         
+        let url = NSURL(string: sectionsDictionary[self.title!]!)
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingWithContentsOfURL(url!)
+
        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,23 +74,25 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return tableRowNumber
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> CardTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath) as! CardTableViewCell
+        let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        print(currentDictionary["title"])
         
-        var sectionNames = Array(sectionsDictionary.keys)
-        let sectionName = sectionNames[indexPath.row]
-        let sectionDescription = sectionsDictionary[sectionName]
-      //  cell.mainLabel?.text = sectionName
-       // cell.contentLabel?.text = sectionDescription
+        cell.mainLabel?.text = currentDictionary["title"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        cell.contentLabel?.text = currentDictionary["description"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let svc = SFSafariViewController(URL: NSURL(string: "http://www.google.com")!)
+        let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
+        let link = dictionary["link"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        print(link)
+        let svc = SFSafariViewController(URL: NSURL(string: link)!)
         svc.delegate = self
         self.presentViewController(svc, animated: true, completion: nil)
     }
@@ -74,9 +101,58 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     {
         controller.dismissViewControllerAnimated(true, completion: nil)
         self.edgesForExtendedLayout = UIRectEdge.All
-        self.tableView.contentInset = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 60.0, right: 0.0)
-
+  //      self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 60.0, right: 0.0)
+//
     }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+            
+            let seconds = 3.0
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+                var refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
+                }))
+                
+                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
+                    self.tableRowNumber += 5
+                    self.tableView.reloadData()
+                }))
+                
+                self.presentViewController(refreshAlert, animated: true, completion: nil)
+                
+            })
+            
+            
+        }
+    }
+    
+    
+    @IBAction func shareClicked(sender: AnyObject) {
+        let textToShare = "Here's an awesome link I found whilst using the loop app!"
+        
+        if let myWebsite = NSURL(string: "http://google.com/") {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func saveButtonClicked(sender: AnyObject) {
+        
+        var refreshAlert = UIAlertController(title: "Whoops!", message: "We're still working on that feature. Coming soon!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cool", style: .Default, handler: { (action: UIAlertAction!) in
+        }))
+        
+        self.presentViewController(refreshAlert, animated: true, completion: nil)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.

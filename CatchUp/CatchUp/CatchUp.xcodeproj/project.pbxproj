@@ -33,8 +33,8 @@
 		C3EEBD471CD2045000E638CF /* Camping_intro.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD461CD2045000E638CF /* Camping_intro.png */; };
 		C3EEBD491CD2075B00E638CF /* 404.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD481CD2075B00E638CF /* 404.png */; };
 		C3EEBD4B1CD2107700E638CF /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEBD4A1CD2107700E638CF /* XMLParser.swift */; };
-		C3EEBD4D1CD2107C00E638CF /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEBD4C1CD2107C00E638CF /* FeedTableViewController.swift */; };
-		C3EEBD4F1CD2108000E638CF /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEBD4E1CD2108000E638CF /* ArticleViewController.swift */; };
+		C3EEBD511CD214F800E638CF /* nyt-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD501CD214F800E638CF /* nyt-logo.png */; };
+		C3EEBD551CD21B6200E638CF /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD541CD21B6200E638CF /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,8 +67,8 @@
 		C3EEBD461CD2045000E638CF /* Camping_intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camping_intro.png; sourceTree = "<group>"; };
 		C3EEBD481CD2075B00E638CF /* 404.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 404.png; sourceTree = "<group>"; };
 		C3EEBD4A1CD2107700E638CF /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
-		C3EEBD4C1CD2107C00E638CF /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
-		C3EEBD4E1CD2108000E638CF /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		C3EEBD501CD214F800E638CF /* nyt-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nyt-logo.png"; sourceTree = "<group>"; };
+		C3EEBD541CD21B6200E638CF /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,16 +113,16 @@
 				C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */,
 				C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */,
 				C3EEBD4A1CD2107700E638CF /* XMLParser.swift */,
-				C3EEBD4C1CD2107C00E638CF /* FeedTableViewController.swift */,
-				C3EEBD4E1CD2108000E638CF /* ArticleViewController.swift */,
 				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
 				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
 				C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */,
 				C3EEBD301CD1FE5100E638CF /* list-fat-7.png */,
 				C3EEBD311CD1FE5100E638CF /* paper-box-7.png */,
 				C3EEBD341CD1FE5900E638CF /* gear-7.png */,
+				C3EEBD541CD21B6200E638CF /* placeholder.png */,
 				C3EEBD461CD2045000E638CF /* Camping_intro.png */,
 				C3EEBD481CD2075B00E638CF /* 404.png */,
+				C3EEBD501CD214F800E638CF /* nyt-logo.png */,
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
 				4A525D0A1CD1B7FA00CF3D67 /* Info.plist */,
@@ -202,8 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EEBD511CD214F800E638CF /* nyt-logo.png in Resources */,
 				C3EEBD471CD2045000E638CF /* Camping_intro.png in Resources */,
 				C3EEBD491CD2075B00E638CF /* 404.png in Resources */,
+				C3EEBD551CD21B6200E638CF /* placeholder.png in Resources */,
 				C3EEBD2F1CD1FE0D00E638CF /* heart-7.png in Resources */,
 				C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */,
 				4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */,
@@ -226,7 +228,6 @@
 				4A525D1E1CD1B89900CF3D67 /* Item+CoreDataProperties.swift in Sources */,
 				4A525D1D1CD1B89900CF3D67 /* Section.swift in Sources */,
 				C3E076751CD1E22000AA6CCB /* CAPSPageMenu.swift in Sources */,
-				C3EEBD4D1CD2107C00E638CF /* FeedTableViewController.swift in Sources */,
 				4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */,
 				4A525D041CD1B7FA00CF3D67 /* CatchUp.xcdatamodeld in Sources */,
 				4A525D241CD1BC2B00CF3D67 /* SectionPickerTableViewController.swift in Sources */,
@@ -234,7 +235,6 @@
 				4A525CFE1CD1B7FA00CF3D67 /* ViewController.swift in Sources */,
 				4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */,
 				4A525D1F1CD1B89900CF3D67 /* Item.swift in Sources */,
-				C3EEBD4F1CD2108000E638CF /* ArticleViewController.swift in Sources */,
 				4A525D1C1CD1B89900CF3D67 /* Section+CoreDataProperties.swift in Sources */,
 				C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */,
 				4A525CFC1CD1B7FA00CF3D67 /* AppDelegate.swift in Sources */,

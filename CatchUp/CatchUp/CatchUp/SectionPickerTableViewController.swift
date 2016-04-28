@@ -14,11 +14,15 @@ class SectionPickerTableViewController: UITableViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     
     var sectionsDictionary: [String: String] = [
-        "Sports": "All things related to sports in the United States",
-        "Technology": "Insight into all things tech, right from the source",
-        "Design": "An overview of design trends and happenings",
-        "Finance": "A look into market trends and movements globally",
-        "Travel": "Stay up to date with the best destinations"]
+        "Sports": "The latest in sports from across the globe, from cricket to soccer.",
+        "Technology": "The latest products and tech business moves.",
+        "Business": "Your look at the world of finance and business, always up to date.",
+        "Science": "The latest in the world of science, from studies to surreal.",
+        "Health": "An apple a day.",
+        "Arts": "From Picasso to Van Gogh, get cultured.",
+        "Style": "The latest from Paris and Milan, right in your hands.",
+        "Travel": "Go jet-setting across the globe from your couch.",
+        "World": "Don't miss a single thing in all corners of the globe."]
     
     var sectionsSelected: Set<String> = []
 

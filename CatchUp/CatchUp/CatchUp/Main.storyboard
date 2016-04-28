@@ -158,22 +158,16 @@
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-tV-C9W">
                                             <rect key="frame" x="15" y="17" width="344" height="414.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People sit in circle happily" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-0Y-bxq">
-                                                    <rect key="frame" x="66" y="8" width="270" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-xm-v17">
-                                                    <rect key="frame" x="8" y="238" width="328" height="127"/>
+                                                    <rect key="frame" x="8" y="257" width="328" height="108"/>
                                                     <string key="text">The pills are commonly used to treat pain, and investigators have brought in the U.S. Drug Enforcement Administration to help with the case, the source said.Investigators believe a health scare about a week before Prince's death, which caused an unscheduled landing of his plane in Illinois, was likely the result of a reaction to the pain medication, the official said.
 </string>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleStory.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
-                                                    <rect key="frame" x="0.0" y="66" width="344" height="164"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
+                                                    <rect key="frame" x="0.0" y="66" width="344" height="183"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr0-ry-jfa">
                                                     <rect key="frame" x="0.0" y="373" width="171" height="41.5"/>
@@ -181,6 +175,9 @@
                                                     <state key="normal" title="Save">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="saveButtonClicked:" destination="u8N-Oj-DNa" eventType="touchUpInside" id="6Cn-ue-pH4"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oe-R9-iCZ">
                                                     <rect key="frame" x="172" y="373" width="172" height="41.5"/>
@@ -188,10 +185,19 @@
                                                     <state key="normal" title="Share">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="shareClicked:" destination="u8N-Oj-DNa" eventType="touchUpInside" id="EUb-aK-Rls"/>
+                                                    </connections>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sampleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-jz-nvh">
-                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nyt-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-jz-nvh">
+                                                    <rect key="frame" x="8" y="13" width="40" height="40"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People sit in circle happily" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-0Y-bxq">
+                                                    <rect key="frame" x="56" y="8" width="280" height="50"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -321,7 +327,7 @@
         <image name="gear-7.png" width="30" height="30"/>
         <image name="heart-7.png" width="30" height="30"/>
         <image name="list-fat-7.png" width="30" height="30"/>
-        <image name="sampleLogo.png" width="100" height="100"/>
-        <image name="sampleStory.jpg" width="2000" height="1000"/>
+        <image name="nyt-logo.png" width="144" height="144"/>
+        <image name="placeholder.png" width="1376" height="700"/>
     </resources>
 </document>
