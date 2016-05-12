@@ -11,6 +11,7 @@ import UIKit
 class CardTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sourceLogo: UIImageView!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!

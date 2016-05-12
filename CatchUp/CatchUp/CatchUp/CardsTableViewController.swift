@@ -36,7 +36,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.rowHeight = 450.0
+        self.tableView.rowHeight = 425
         
         self.edgesForExtendedLayout = UIRectEdge.All
         self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:49.0, right: 0.0)
@@ -80,10 +80,21 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> CardTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath) as! CardTableViewCell
         let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
-        print(currentDictionary["title"])
-        
+        if (currentDictionary["pubDate"] != nil) {
+        let date = NSDate(fromString:currentDictionary["pubDate"]!, format: .RSS)
+            print(date)
+            cell.dateLabel?.text = date.relativeTimeToString()
+
+        } else {
+            cell.dateLabel?.text = "Now"
+        }
+//        let now = NSDate()
+//        let timePassed = date.hoursAfterDate(now)
+//
+
         cell.mainLabel?.text = currentDictionary["title"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         cell.contentLabel?.text = currentDictionary["description"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+
         
         return cell
     }

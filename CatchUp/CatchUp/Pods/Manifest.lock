@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (3.2.1)
+  - FeedlyKit (0.5.3):
+    - Alamofire (~> 3.2.1)
+    - SwiftyJSON (~> 2.3)
+  - NXOAuth2Client (1.2.8)
+  - Optimizely-iOS-SDK (1.4.2)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - FeedlyKit
+  - NXOAuth2Client (~> 1.2.8)
+  - Optimizely-iOS-SDK
+
+SPEC CHECKSUMS:
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  FeedlyKit: 4171be4d2880ec7235343db905b5951f3844fe29
+  NXOAuth2Client: 98c4d4c594edd2b289cfc34a8928653e1dab7adf
+  Optimizely-iOS-SDK: 6d23c5cde187f894430d134caa15f56874754cca
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 657e3f485b1ee259e1e159554cf72aca99f82306
+
+COCOAPODS: 1.0.0

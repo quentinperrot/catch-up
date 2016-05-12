@@ -21,11 +21,21 @@
 		4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */; };
 		4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */; };
 		4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */; };
+		A2EE2A08A524263370CC61AC /* Pods_CatchUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */; };
 		C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B493A1CD2238D00A448EF /* SweetAlert.swift */; };
+		C33642E81CE3FFEC002D03CA /* Bullish-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642E51CE3FFEC002D03CA /* Bullish-100@2x.png */; };
+		C33642E91CE3FFEC002D03CA /* Hearts-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642E61CE3FFEC002D03CA /* Hearts-100@2x.png */; };
+		C33642EA1CE3FFEC002D03CA /* Settings-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642E71CE3FFEC002D03CA /* Settings-100@2x.png */; };
+		C33642EE1CE40059002D03CA /* Bullish-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642EB1CE40059002D03CA /* Bullish-100.png */; };
+		C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642EC1CE40059002D03CA /* Hearts-100.png */; };
+		C33642F01CE40059002D03CA /* Settings-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642ED1CE40059002D03CA /* Settings-100.png */; };
 		C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */; };
 		C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */; };
 		C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */; };
 		C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */; };
+		C3DBE04B1CE40AEC009F699D /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */; };
+		C3DBE04D1CE41264009F699D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04C1CE41264009F699D /* ProgressBar.swift */; };
+		C3DBE04F1CE414A3009F699D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04E1CE414A3009F699D /* ProgressView.swift */; };
 		C3E076751CD1E22000AA6CCB /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */; };
 		C3EEBD2F1CD1FE0D00E638CF /* heart-7.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */; };
 		C3EEBD321CD1FE5100E638CF /* list-fat-7.png in Resources */ = {isa = PBXBuildFile; fileRef = C3EEBD301CD1FE5100E638CF /* list-fat-7.png */; };
@@ -39,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatchUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A525CF81CD1B7FA00CF3D67 /* CatchUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A525CFB1CD1B7FA00CF3D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A525CFD1CD1B7FA00CF3D67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +66,22 @@
 		4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7BC10FDF9C192CCBBC8FA529 /* Pods-CatchUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.release.xcconfig"; sourceTree = "<group>"; };
+		8675EF76CE4433BC7FAFF77B /* Pods-CatchUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.debug.xcconfig"; sourceTree = "<group>"; };
 		C30B493A1CD2238D00A448EF /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		C33642E51CE3FFEC002D03CA /* Bullish-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bullish-100@2x.png"; sourceTree = "<group>"; };
+		C33642E61CE3FFEC002D03CA /* Hearts-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hearts-100@2x.png"; sourceTree = "<group>"; };
+		C33642E71CE3FFEC002D03CA /* Settings-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-100@2x.png"; sourceTree = "<group>"; };
+		C33642EB1CE40059002D03CA /* Bullish-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bullish-100.png"; sourceTree = "<group>"; };
+		C33642EC1CE40059002D03CA /* Hearts-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hearts-100.png"; sourceTree = "<group>"; };
+		C33642ED1CE40059002D03CA /* Settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-100.png"; sourceTree = "<group>"; };
 		C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLogo.png; sourceTree = "<group>"; };
 		C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleStory.jpg; sourceTree = "<group>"; };
+		C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
+		C3DBE04C1CE41264009F699D /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		C3DBE04E1CE414A3009F699D /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C3EEBD261CD1FC6000E638CF /* CatchUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatchUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
@@ -78,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2EE2A08A524263370CC61AC /* Pods_CatchUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +112,8 @@
 			children = (
 				4A525CFA1CD1B7FA00CF3D67 /* CatchUp */,
 				4A525CF91CD1B7FA00CF3D67 /* Products */,
+				7A7F455B6FE2B656C3BB4868 /* Pods */,
+				E7B4122822097FA98B091052 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,23 +134,17 @@
 				C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */,
 				4A525CFD1CD1B7FA00CF3D67 /* ViewController.swift */,
 				4A525D251CD1D0DC00CF3D67 /* PersonalizedViewController.swift */,
+				C3DBE04E1CE414A3009F699D /* ProgressView.swift */,
 				4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */,
 				4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */,
 				4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */,
 				C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */,
 				C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */,
 				C30B493A1CD2238D00A448EF /* SweetAlert.swift */,
+				C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */,
 				C3EEBD4A1CD2107700E638CF /* XMLParser.swift */,
-				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
-				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
-				C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */,
-				C3EEBD301CD1FE5100E638CF /* list-fat-7.png */,
-				C3EEBD311CD1FE5100E638CF /* paper-box-7.png */,
-				C3EEBD341CD1FE5900E638CF /* gear-7.png */,
-				C3EEBD541CD21B6200E638CF /* placeholder.png */,
-				C3EEBD461CD2045000E638CF /* Camping_intro.png */,
-				C3EEBD481CD2075B00E638CF /* 404.png */,
-				C3EEBD501CD214F800E638CF /* nyt-logo.png */,
+				C3DBE04C1CE41264009F699D /* ProgressBar.swift */,
+				C33642F11CE407EE002D03CA /* Image Resources */,
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
 				4A525D0A1CD1B7FA00CF3D67 /* Info.plist */,
@@ -146,6 +165,46 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		7A7F455B6FE2B656C3BB4868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8675EF76CE4433BC7FAFF77B /* Pods-CatchUp.debug.xcconfig */,
+				7BC10FDF9C192CCBBC8FA529 /* Pods-CatchUp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C33642F11CE407EE002D03CA /* Image Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
+				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
+				C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */,
+				C3EEBD301CD1FE5100E638CF /* list-fat-7.png */,
+				C3EEBD311CD1FE5100E638CF /* paper-box-7.png */,
+				C3EEBD341CD1FE5900E638CF /* gear-7.png */,
+				C3EEBD541CD21B6200E638CF /* placeholder.png */,
+				C3EEBD461CD2045000E638CF /* Camping_intro.png */,
+				C3EEBD481CD2075B00E638CF /* 404.png */,
+				C3EEBD501CD214F800E638CF /* nyt-logo.png */,
+				C33642E51CE3FFEC002D03CA /* Bullish-100@2x.png */,
+				C33642E61CE3FFEC002D03CA /* Hearts-100@2x.png */,
+				C33642E71CE3FFEC002D03CA /* Settings-100@2x.png */,
+				C33642EB1CE40059002D03CA /* Bullish-100.png */,
+				C33642EC1CE40059002D03CA /* Hearts-100.png */,
+				C33642ED1CE40059002D03CA /* Settings-100.png */,
+			);
+			name = "Image Resources";
+			sourceTree = "<group>";
+		};
+		E7B4122822097FA98B091052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A525D0D1CD1B7FA00CF3D67 /* Build configuration list for PBXNativeTarget "CatchUp" */;
 			buildPhases = (
+				2EC14441E0AD63631ABC0EC5 /* 📦 Check Pods Manifest.lock */,
 				4A525CF41CD1B7FA00CF3D67 /* Sources */,
 				4A525CF51CD1B7FA00CF3D67 /* Frameworks */,
 				4A525CF61CD1B7FA00CF3D67 /* Resources */,
+				5F6A9B5796DCA46145A487F0 /* 📦 Embed Pods Frameworks */,
+				5EE81518737C2B4DE77DBDF6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,7 +271,10 @@
 				C3EEBD471CD2045000E638CF /* Camping_intro.png in Resources */,
 				C3EEBD491CD2075B00E638CF /* 404.png in Resources */,
 				C3EEBD551CD21B6200E638CF /* placeholder.png in Resources */,
+				C33642E91CE3FFEC002D03CA /* Hearts-100@2x.png in Resources */,
+				C33642EA1CE3FFEC002D03CA /* Settings-100@2x.png in Resources */,
 				C3EEBD2F1CD1FE0D00E638CF /* heart-7.png in Resources */,
+				C33642E81CE3FFEC002D03CA /* Bullish-100@2x.png in Resources */,
 				C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */,
 				4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */,
 				4A525D091CD1B7FA00CF3D67 /* LaunchScreen.storyboard in Resources */,
@@ -217,11 +282,62 @@
 				C3EEBD321CD1FE5100E638CF /* list-fat-7.png in Resources */,
 				C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */,
 				4A525D061CD1B7FA00CF3D67 /* Assets.xcassets in Resources */,
+				C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */,
+				C33642F01CE40059002D03CA /* Settings-100.png in Resources */,
 				C3EEBD351CD1FE5900E638CF /* gear-7.png in Resources */,
+				C33642EE1CE40059002D03CA /* Bullish-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EC14441E0AD63631ABC0EC5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EE81518737C2B4DE77DBDF6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6A9B5796DCA46145A487F0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A525CF41CD1B7FA00CF3D67 /* Sources */ = {
@@ -232,16 +348,19 @@
 				4A525D1D1CD1B89900CF3D67 /* Section.swift in Sources */,
 				C3E076751CD1E22000AA6CCB /* CAPSPageMenu.swift in Sources */,
 				4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */,
+				C3DBE04D1CE41264009F699D /* ProgressBar.swift in Sources */,
 				4A525D041CD1B7FA00CF3D67 /* CatchUp.xcdatamodeld in Sources */,
 				4A525D241CD1BC2B00CF3D67 /* SectionPickerTableViewController.swift in Sources */,
 				4A525D261CD1D0DC00CF3D67 /* PersonalizedViewController.swift in Sources */,
 				4A525CFE1CD1B7FA00CF3D67 /* ViewController.swift in Sources */,
+				C3DBE04B1CE40AEC009F699D /* AFDateExtension.swift in Sources */,
 				4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */,
 				4A525D1F1CD1B89900CF3D67 /* Item.swift in Sources */,
 				4A525D1C1CD1B89900CF3D67 /* Section+CoreDataProperties.swift in Sources */,
 				C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */,
 				C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */,
 				4A525CFC1CD1B7FA00CF3D67 /* AppDelegate.swift in Sources */,
+				C3DBE04F1CE414A3009F699D /* ProgressView.swift in Sources */,
 				C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */,
 				C3EEBD4B1CD2107700E638CF /* XMLParser.swift in Sources */,
 			);
@@ -344,6 +463,7 @@
 		};
 		4A525D0E1CD1B7FA00CF3D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8675EF76CE4433BC7FAFF77B /* Pods-CatchUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -361,6 +481,7 @@
 		};
 		4A525D0F1CD1B7FA00CF3D67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC10FDF9C192CCBBC8FA529 /* Pods-CatchUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

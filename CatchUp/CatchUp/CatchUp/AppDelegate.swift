@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Optimizely
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBar.appearance().tintColor = UIColor(red: 24/255.0, green: 169/255.0, blue: 255/255.0, alpha: 1.0)
+        Optimizely.startOptimizelyWithAPIToken("AANQAQsBgbV02iVEYEeYyaoDiiVBleW5~5876962274", launchOptions:launchOptions)
+        
+        
         return true
     }
 
@@ -42,6 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        if Optimizely.handleOpenURL(url) {
+            return true
+        }
+        return false
     }
 
     // MARK: - Core Data stack

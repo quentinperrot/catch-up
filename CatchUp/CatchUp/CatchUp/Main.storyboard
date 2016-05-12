@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -67,11 +67,17 @@
         <scene sceneID="9Ar-6q-OCn">
             <objects>
                 <tabBarController id="nIf-np-EZN" sceneMemberID="viewController">
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="iAA-bm-w1U">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="iAA-bm-w1U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.094117647058823528" green="0.66274509803921566" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.094117647060000004" green="0.66274509800000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="sex-nV-ibM" kind="relationship" relationship="viewControllers" id="XdW-RM-kl2"/>
@@ -92,11 +98,11 @@
                         <viewControllerLayoutGuide type="bottom" id="QVl-MX-yPu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QoH-lN-VYW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="For You" image="heart-7.png" id="RJe-68-Pjq"/>
+                    <tabBarItem key="tabBarItem" title="For You" image="Hearts-100.png" id="RJe-68-Pjq"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-p3-3oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,7 +118,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Kv7-ge-3R6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aOQ-rF-dKH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="404.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-sQ-sz7">
@@ -133,7 +139,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Popular" image="list-fat-7.png" id="qBf-YH-0ZF"/>
+                    <tabBarItem key="tabBarItem" title="Popular" image="Bullish-100.png" id="qBf-YH-0ZF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqT-oW-4H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,67 +154,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="450" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="CatchUp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="450"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="428" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="CatchUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="428"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciP-UC-OoO" id="Cpw-S0-sug">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="449.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="427.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-tV-C9W">
-                                            <rect key="frame" x="15" y="17" width="344" height="414.5"/>
+                                            <rect key="frame" x="15" y="17" width="344" height="378.5"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="218"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-xm-v17">
-                                                    <rect key="frame" x="8" y="257" width="328" height="108"/>
+                                                    <rect key="frame" x="8" y="272" width="328" height="93"/>
                                                     <string key="text">The pills are commonly used to treat pain, and investigators have brought in the U.S. Drug Enforcement Administration to help with the case, the source said.Investigators believe a health scare about a week before Prince's death, which caused an unscheduled landing of his plane in Illinois, was likely the result of a reaction to the pain medication, the official said.
 </string>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
-                                                    <rect key="frame" x="0.0" y="66" width="344" height="183"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr0-ry-jfa">
-                                                    <rect key="frame" x="0.0" y="373" width="171" height="41.5"/>
-                                                    <color key="backgroundColor" red="0.80102666884816753" green="0.80102666884816753" blue="0.80102666884816753" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Save">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="saveButtonClicked:" destination="u8N-Oj-DNa" eventType="touchUpInside" id="6Cn-ue-pH4"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oe-R9-iCZ">
-                                                    <rect key="frame" x="172" y="373" width="172" height="41.5"/>
-                                                    <color key="backgroundColor" red="0.80102666879999995" green="0.80102666879999995" blue="0.80102666879999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Share">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="shareClicked:" destination="u8N-Oj-DNa" eventType="touchUpInside" id="EUb-aK-Rls"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nyt-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-jz-nvh">
-                                                    <rect key="frame" x="8" y="13" width="40" height="40"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People sit in circle happily" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-0Y-bxq">
-                                                    <rect key="frame" x="56" y="8" width="280" height="50"/>
-                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People sit in circle happily" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQa-0Y-bxq">
+                                                    <rect key="frame" x="8" y="221" width="336" height="51"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                    <color key="textColor" red="0.36470588235294116" green="0.40000000000000002" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New York Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-BQ-pDO">
+                                            <rect key="frame" x="15" y="396" width="124" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Hours Ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-XD-en6">
+                                            <rect key="frame" x="235" y="396" width="124" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.86626717931937169" green="0.86626717931937169" blue="0.86626717931937169" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="articleLogo" destination="Bd0-cU-2jZ" id="hlT-Yq-jpx"/>
                                     <outlet property="contentLabel" destination="NRG-xm-v17" id="2TH-qT-ZLI"/>
+                                    <outlet property="dateLabel" destination="dpW-XD-en6" id="pqW-WJ-cA4"/>
                                     <outlet property="mainLabel" destination="HQa-0Y-bxq" id="A1t-dd-h2D"/>
-                                    <outlet property="sourceLogo" destination="bhn-jz-nvh" id="1sQ-zy-Obq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -235,7 +230,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7Zb-kI-N0D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XE8-qt-Y1f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="404.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qrs-R2-P9S">
@@ -256,7 +251,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear-7.png" id="sSM-DG-ZEo"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings-100.png" id="sSM-DG-ZEo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5H-an-5aD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,11 +318,10 @@
     </scenes>
     <resources>
         <image name="404.png" width="640" height="1136"/>
+        <image name="Bullish-100.png" width="25" height="25"/>
         <image name="Camping_intro.png" width="640" height="1136"/>
-        <image name="gear-7.png" width="30" height="30"/>
-        <image name="heart-7.png" width="30" height="30"/>
-        <image name="list-fat-7.png" width="30" height="30"/>
-        <image name="nyt-logo.png" width="144" height="144"/>
+        <image name="Hearts-100.png" width="30" height="30"/>
+        <image name="Settings-100.png" width="25" height="25"/>
         <image name="placeholder.png" width="1376" height="700"/>
     </resources>
 </document>

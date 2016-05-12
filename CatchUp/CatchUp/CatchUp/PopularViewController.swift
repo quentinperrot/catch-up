@@ -50,6 +50,8 @@ class PopularViewController: UIViewController {
         // or use pageMenu controller in you view hierachy as desired
         self.view.addSubview(pageMenu!.view)
         
+    
+        
         // Do any additional setup after loading the view.
     }
     
