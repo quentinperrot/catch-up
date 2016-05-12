@@ -137,6 +137,17 @@ class SectionPickerTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Load live variable
+        var key = OptimizelyVariableKey.optimizelyKeyWithKey("myKey", defaultNSString: "myValue")
+        var liveVariable:String = Optimizely.stringForKey(key)
+        
+        // Use the liveVariable
+        if(liveVariable == "VarA") {
+            var alert:UIAlertView = UIAlertView(title: "AB Test", message: "This alert only shows if liveVariable equals VarA", delegate: self, cancelButtonTitle: "Close")
+            alert.show()
+        }
+        
         print(defaults.objectForKey("sections"))
     }
 

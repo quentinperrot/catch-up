@@ -27,6 +27,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     
     var foundCharacters = ""
     
+    var url = ""
+    
     func parserDidEndDocument(parser: NSXMLParser) {
         delegate?.parsingWasFinished()
     }
@@ -39,12 +41,28 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         currentElement = elementName
+        
+        if (currentElement == "media:content") {
+            url = String(attributeDict["url"])
+            print("Raw URL: \(url)")
+        } else if (currentElement == "media:thumbnail") {
+            url = String(attributeDict["url"])
+        }
     }
 
     
     func parser(parser: NSXMLParser, foundCharacters string: String!) {
-        if (currentElement == "title" || currentElement == "link" || currentElement == "pubDate" || currentElement == "description") {
+        if (currentElement == "media:content") {
+            foundCharacters += url
+            print("Url: \(foundCharacters)")
+        } else if (currentElement == "media:thumbnail") {
+            foundCharacters += url
+            print("Url: \(foundCharacters)")
+        }
+        else if (currentElement == "title" || currentElement == "link" || currentElement == "pubDate" || currentElement == "description") {
+            print(currentElement)
             foundCharacters += string
+            print("Characters: \(foundCharacters)")
         }
     }
     
@@ -61,6 +79,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             
             if currentElement == "description" {
                 arrParsedData.append(currentDataDictionary)
+                print("ParsedData: \(arrParsedData)")
             }
         }
     }
