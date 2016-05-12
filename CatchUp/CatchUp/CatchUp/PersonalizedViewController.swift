@@ -16,7 +16,6 @@ class PersonalizedViewController: UIViewController {
     
     let defaults = NSUserDefaults.standardUserDefaults()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Array to keep track of controllers in page menu
@@ -31,18 +30,23 @@ class PersonalizedViewController: UIViewController {
         let allSectionsChosen = defaults.objectForKey("sections") as! [String]
         
         for section in allSectionsChosen {
-            let vc = storyboard!.instantiateViewControllerWithIdentifier("cardsViewController") as! UIViewController
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("cardsViewController")
             vc.title = section
             controllerArray.append(vc)
         }
         
-        
+        let colorBar = UIColor(netHex:0x18A9FF)
+        let colorUnselected = UIColor(netHex:0xDFDFDF)
+
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
         // Example:
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(4.3),
             .UseMenuLikeSegmentedControl(false),
-            .MenuItemSeparatorPercentageHeight(0.1)
+            .MenuItemSeparatorPercentageHeight(0.1),
+            .ScrollMenuBackgroundColor(colorBar),
+            .UnselectedMenuItemLabelColor(colorUnselected),
+            .MenuHeight(50)
         ]
         
         // Initialize page menu with controller array, frame, and optional parameters
@@ -51,13 +55,22 @@ class PersonalizedViewController: UIViewController {
         // Lastly add page menu as subview of base view controller view
         // or use pageMenu controller in you view hierachy as desired
         self.view.addSubview(pageMenu!.view)
+//        
+//        let progressInit = ProgressView
+//        self.view.addSubview(progessInit.view)
+
+       let testFrame : CGRect = CGRectMake(0,610,375,8)
+        var testView : ProgressView = ProgressView(frame: testFrame)
+        self.view.addSubview(testView)
       
+
         // Do any additional setup after loading the view.
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,4 +88,18 @@ class PersonalizedViewController: UIViewController {
     }
     */
 
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(netHex:Int) {
+        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+    }
 }
