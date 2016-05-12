@@ -17,6 +17,8 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.tableView.reloadData()
     }
     
+    public var cellsScrolled = 1
+    
     var tableRowNumber = 5
     
     var sectionsDictionary: [String: String] = [
@@ -119,25 +121,31 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
             
-            let seconds = 2.3
-            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                
-                var refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
-                }))
-                
-                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
-                    self.tableRowNumber += 5
-                    self.tableView.reloadData()
-                }))
-                
-                self.presentViewController(refreshAlert, animated: true, completion: nil)
-                
-            })
+            cellsScrolled = 5
+            
+
+           
+//            
+//            let seconds = 2.3
+//            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+//            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+//            
+//            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+//                
+//                var refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
+//                
+//                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
+//                }))
+//                
+//                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
+//                    self.tableRowNumber += 5
+//                    self.tableView.reloadData()
+//                }))
+//                
+//                self.presentViewController(refreshAlert, animated: true, completion: nil)
+//                
+//            })
             
             
         }

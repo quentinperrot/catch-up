@@ -51,5 +51,149 @@ public class ProgressBar : NSObject {
         fillColor2.setFill()
         rectangle5Path.fill()
     }
+    
+    public class func drawCanvas2() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1.000)
+        let fillColor2 = UIColor(red: 0.094, green: 0.663, blue: 1.000, alpha: 1.000)
+        
+        //// Group 2
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(300, 0, 75, 8))
+        fillColor.setFill()
+        rectanglePath.fill()
+        
+        
+        //// Rectangle 2 Drawing
+        let rectangle2Path = UIBezierPath(rect: CGRectMake(225, 0, 74, 8))
+        fillColor.setFill()
+        rectangle2Path.fill()
+        
+        
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRectMake(150, 0, 74, 8))
+        fillColor.setFill()
+        rectangle3Path.fill()
+        
+        
+        //// Rectangle 4 Drawing
+        let rectangle4Path = UIBezierPath(rect: CGRectMake(75, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle4Path.fill()
+        
+        
+        //// Rectangle 5 Drawing
+        let rectangle5Path = UIBezierPath(rect: CGRectMake(0, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle5Path.fill()
+    }
+    
+    public class func drawCanvas3() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1.000)
+        let fillColor2 = UIColor(red: 0.094, green: 0.663, blue: 1.000, alpha: 1.000)
+        
+        //// Group 2
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(300, 0, 75, 8))
+        fillColor.setFill()
+        rectanglePath.fill()
+        
+        
+        //// Rectangle 2 Drawing
+        let rectangle2Path = UIBezierPath(rect: CGRectMake(225, 0, 74, 8))
+        fillColor.setFill()
+        rectangle2Path.fill()
+        
+        
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRectMake(150, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle3Path.fill()
+        
+        
+        //// Rectangle 4 Drawing
+        let rectangle4Path = UIBezierPath(rect: CGRectMake(75, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle4Path.fill()
+        
+        
+        //// Rectangle 5 Drawing
+        let rectangle5Path = UIBezierPath(rect: CGRectMake(0, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle5Path.fill()
+    }
+    
+    public class func drawCanvas4() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1.000)
+        let fillColor2 = UIColor(red: 0.094, green: 0.663, blue: 1.000, alpha: 1.000)
+        
+        //// Group 2
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(300, 0, 75, 8))
+        fillColor.setFill()
+        rectanglePath.fill()
+        
+        
+        //// Rectangle 2 Drawing
+        let rectangle2Path = UIBezierPath(rect: CGRectMake(225, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle2Path.fill()
+        
+        
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRectMake(150, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle3Path.fill()
+        
+        
+        //// Rectangle 4 Drawing
+        let rectangle4Path = UIBezierPath(rect: CGRectMake(75, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle4Path.fill()
+        
+        
+        //// Rectangle 5 Drawing
+        let rectangle5Path = UIBezierPath(rect: CGRectMake(0, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle5Path.fill()
+    }
+    
+    public class func drawCanvas5() {
+        //// Color Declarations
+        let fillColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1.000)
+        let fillColor2 = UIColor(red: 0.094, green: 0.663, blue: 1.000, alpha: 1.000)
+        
+        //// Group 2
+        //// Rectangle Drawing
+        let rectanglePath = UIBezierPath(rect: CGRectMake(300, 0, 75, 8))
+        fillColor2.setFill()
+        rectanglePath.fill()
+        
+        
+        //// Rectangle 2 Drawing
+        let rectangle2Path = UIBezierPath(rect: CGRectMake(225, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle2Path.fill()
+        
+        
+        //// Rectangle 3 Drawing
+        let rectangle3Path = UIBezierPath(rect: CGRectMake(150, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle3Path.fill()
+        
+        
+        //// Rectangle 4 Drawing
+        let rectangle4Path = UIBezierPath(rect: CGRectMake(75, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle4Path.fill()
+        
+        
+        //// Rectangle 5 Drawing
+        let rectangle5Path = UIBezierPath(rect: CGRectMake(0, 0, 74, 8))
+        fillColor2.setFill()
+        rectangle5Path.fill()
+    }
 
 }

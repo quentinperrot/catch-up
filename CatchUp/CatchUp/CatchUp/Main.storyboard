@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="For You" image="Hearts-100.png" id="RJe-68-Pjq"/>
+                    <tabBarItem key="tabBarItem" title="Your Sources" image="Hearts-100.png" id="RJe-68-Pjq"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-p3-3oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,16 +149,17 @@
         <scene sceneID="akm-cE-Y3t">
             <objects>
                 <tableViewController storyboardIdentifier="cardsViewController" title="cardsViewController" id="u8N-Oj-DNa" customClass="CardsTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TCP-Ui-lnc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TCP-Ui-lnc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="428" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="CatchUp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="428"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciP-UC-OoO" id="Cpw-S0-sug">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="427.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="428"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-tV-C9W">

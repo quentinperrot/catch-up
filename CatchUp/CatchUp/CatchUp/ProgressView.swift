@@ -9,10 +9,20 @@
 import UIKit
 
 class ProgressView: UIView {
-
+    
+    public var cellsScrolled = 1
+    
     override func drawRect(rect: CGRect) {
-        ProgressBar.drawCanvas1()
+        if cellsScrolled == 1 {
+            ProgressBar.drawCanvas1()
+        }
+        if cellsScrolled == 3 {
+            ProgressBar.drawCanvas3()
+        }
     }
-
+    
+    public func cellsScrolledChange(change: Int) {
+        cellsScrolled = change
+    }
 
 }
