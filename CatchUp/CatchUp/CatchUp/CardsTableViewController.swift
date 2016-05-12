@@ -94,8 +94,13 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
 
         cell.mainLabel?.text = currentDictionary["title"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         cell.contentLabel?.text = currentDictionary["description"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-
         
+        // Load image
+//        let filePathURL = NSURL.fileURLWithPath(currentDictionary["media:description"]!)
+//        if let data = NSData(contentsOfURL: filePathURL) {
+//            cell.sourceLogo.image = UIImage(data: data)
+//        }
+//        
         return cell
     }
     

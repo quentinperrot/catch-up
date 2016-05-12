@@ -10,6 +10,9 @@ import UIKit
 import CoreData
 import Optimizely
 
+// Define and register live variable with type String
+// internal var myGravityVariableKey: OptimizelyVariableKey = OptimizelyVariableKey.optimizelyKeyWithKey("myGravityVariable", defaultNSNumber: 9.8)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = UIColor(red: 24/255.0, green: 169/255.0, blue: 255/255.0, alpha: 1.0)
+        
+        // Launch Optimizely
         Optimizely.startOptimizelyWithAPIToken("AANQAQsBgbV02iVEYEeYyaoDiiVBleW5~5876962274", launchOptions:launchOptions)
         
+        // Make sure to pre-register your keys before starting Optimizely
+        //Optimizely.preregisterVariableKey(myKey)
         
         return true
     }
