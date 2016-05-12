@@ -34,13 +34,18 @@ class PopularViewController: UIViewController {
         }
         
         
+        let colorBar = UIColor(netHex:0x18A9FF)
+        let colorUnselected = UIColor(netHex:0xDFDFDF)
+        
         // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
         // Example:
         var parameters: [CAPSPageMenuOption] = [
-            .MenuItemSeparatorWidth(0.0),
+            .MenuItemSeparatorWidth(4.3),
             .UseMenuLikeSegmentedControl(false),
             .MenuItemSeparatorPercentageHeight(0.1),
             .ScrollMenuBackgroundColor(UIColor.darkGrayColor()),
+            .UnselectedMenuItemLabelColor(colorUnselected),
+            .MenuHeight(50)
         ]
         
         // Initialize page menu with controller array, frame, and optional parameters
@@ -50,10 +55,20 @@ class PopularViewController: UIViewController {
         // or use pageMenu controller in you view hierachy as desired
         self.view.addSubview(pageMenu!.view)
         
+        makeProgressBar(1)
     
         
         // Do any additional setup after loading the view.
     }
+    
+    public func makeProgressBar(value: Int) {
+        let testFrame : CGRect = CGRectMake(0,610,375,8)
+        var testView : ProgressView = ProgressView(frame: testFrame)
+        testView.cellsScrolledChange(value)
+        self.view.addSubview(testView)
+        
+    }
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -76,3 +91,18 @@ class PopularViewController: UIViewController {
      */
 
 }
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(netHex:Int) {
+        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+    }
+}
+
