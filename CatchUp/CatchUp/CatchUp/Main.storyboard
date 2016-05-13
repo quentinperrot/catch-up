@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Section Picker Table View Controller-->
@@ -165,9 +165,6 @@
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-tV-C9W">
                                             <rect key="frame" x="15" y="17" width="344" height="378.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="218"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-xm-v17">
                                                     <rect key="frame" x="8" y="272" width="328" height="93"/>
                                                     <string key="text">The pills are commonly used to treat pain, and investigators have brought in the U.S. Drug Enforcement Administration to help with the case, the source said.Investigators believe a health scare about a week before Prince's death, which caused an unscheduled landing of his plane in Illinois, was likely the result of a reaction to the pain medication, the official said.
@@ -182,6 +179,9 @@
                                                     <color key="textColor" red="0.36470588235294116" green="0.40000000000000002" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-cU-2jZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="218"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -202,6 +202,7 @@
                                 <color key="backgroundColor" red="0.86626717931937169" green="0.86626717931937169" blue="0.86626717931937169" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="articleLogo" destination="Bd0-cU-2jZ" id="hlT-Yq-jpx"/>
+                                    <outlet property="cardImage" destination="Bd0-cU-2jZ" id="5Kk-Pj-Y8D"/>
                                     <outlet property="contentLabel" destination="NRG-xm-v17" id="2TH-qT-ZLI"/>
                                     <outlet property="dateLabel" destination="dpW-XD-en6" id="pqW-WJ-cA4"/>
                                     <outlet property="mainLabel" destination="HQa-0Y-bxq" id="A1t-dd-h2D"/>
