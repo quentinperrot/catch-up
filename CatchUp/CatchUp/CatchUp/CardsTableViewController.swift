@@ -43,7 +43,6 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.edgesForExtendedLayout = UIRectEdge.All
         self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:49.0, right: 0.0)
 
-        print(self.title)
         
         let url = NSURL(string: sectionsDictionary[self.title!]!)
         xmlParser = XMLParser()
@@ -84,32 +83,27 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
         if (currentDictionary["pubDate"] != nil) {
         let date = NSDate(fromString:currentDictionary["pubDate"]!, format: .RSS)
-            print(date)
             cell.dateLabel?.text = date.relativeTimeToString()
 
         } else {
             cell.dateLabel?.text = "Now"
         }
-//        let now = NSDate()
-//        let timePassed = date.hoursAfterDate(now)
-//
 
         cell.mainLabel?.text = currentDictionary["title"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         cell.contentLabel?.text = currentDictionary["description"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    
+        let imageLink = currentDictionary["media:description"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        let url = NSURL(string:imageLink)!
+        let data = NSData(contentsOfURL:url)
+        cell.cardImage.image = UIImage(data:data!)
         
-        // Load image
-//        let filePathURL = NSURL.fileURLWithPath(currentDictionary["media:description"]!)
-//        if let data = NSData(contentsOfURL: filePathURL) {
-//            cell.sourceLogo.image = UIImage(data: data)
-//        }
-//        
         return cell
+    
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
         let link = dictionary["link"]!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        print(link)
         let svc = SFSafariViewController(URL: NSURL(string: link)!)
         svc.delegate = self
         self.presentViewController(svc, animated: true, completion: nil)
