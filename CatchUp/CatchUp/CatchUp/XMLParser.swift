@@ -29,6 +29,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     
     var url = ""
     
+    var data = String()
+    
     func parserDidEndDocument(parser: NSXMLParser) {
         delegate?.parsingWasFinished()
     }
@@ -44,11 +46,12 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         
         if (currentElement == "media:content") {
             url = String(UTF8String: attributeDict["url"]!)!
+            url = url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         } else if (currentElement == "media:thumbnail") {
             url = String(UTF8String: attributeDict["url"]!)!
+            url = url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         }
     }
-
     
     func parser(parser: NSXMLParser, foundCharacters string: String!) {
         if (currentElement == "media:content") {
@@ -65,7 +68,11 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         if !foundCharacters.isEmpty {
             
             if elementName == "link" {
-                foundCharacters = (foundCharacters as NSString).substringFromIndex(3) //manipulate link string
+                let characterToFind: Character = "h"
+                if let index = foundCharacters.characters.indexOf(characterToFind) {
+                    foundCharacters = foundCharacters.substringFromIndex(index)
+                    foundCharacters = foundCharacters.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+                }
             }
             
             currentDataDictionary[currentElement] = foundCharacters

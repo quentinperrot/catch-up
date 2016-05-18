@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Section Picker Table View Controller-->
+        <!--Sources-->
         <scene sceneID="YCZ-4M-5bF">
             <objects>
                 <tableViewController id="W7N-3l-T9n" customClass="SectionPickerTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,32 +13,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What do you really care about? Select up to 4 items." textAlignment="center" id="j8P-bY-RJy">
-                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="B2I-jy-zkO" detailTextLabel="d93-kp-BMF" style="IBUITableViewCellStyleSubtitle" id="v5m-Id-Rn2">
-                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="B2I-jy-zkO" rowHeight="400" style="IBUITableViewCellStyleDefault" id="v5m-Id-Rn2">
+                                <rect key="frame" x="0.0" y="122" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v5m-Id-Rn2" id="LAH-KQ-Dlc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="399.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B2I-jy-zkO">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zk-29-HSd">
+                                            <rect key="frame" x="100" y="0.0" width="175" height="100"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B2I-jy-zkO">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="399.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d93-kp-BMF">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -51,13 +40,14 @@
                             <outlet property="delegate" destination="W7N-3l-T9n" id="fvK-63-jsh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2le-Eb-IEM">
+                    <navigationItem key="navigationItem" title="Sources" prompt="What do you really care about? Select up to 4 items." id="2le-Eb-IEM">
                         <barButtonItem key="rightBarButtonItem" title="Continue" id="eig-42-rDv">
                             <connections>
                                 <segue destination="nIf-np-EZN" kind="presentation" id="fiP-Ul-LzK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDB-Bo-sZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +175,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New York Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-BQ-pDO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Publication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-BQ-pDO">
                                             <rect key="frame" x="15" y="396" width="124" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,6 +196,7 @@
                                     <outlet property="contentLabel" destination="NRG-xm-v17" id="2TH-qT-ZLI"/>
                                     <outlet property="dateLabel" destination="dpW-XD-en6" id="pqW-WJ-cA4"/>
                                     <outlet property="mainLabel" destination="HQa-0Y-bxq" id="A1t-dd-h2D"/>
+                                    <outlet property="publicationLabel" destination="J3L-BQ-pDO" id="Due-i0-EMm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

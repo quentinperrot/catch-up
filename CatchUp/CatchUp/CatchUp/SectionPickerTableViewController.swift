@@ -8,21 +8,23 @@
 
 import UIKit
 
+
 class SectionPickerTableViewController: UITableViewController {
     
-    
+    var limit = 4
+
     let defaults = NSUserDefaults.standardUserDefaults()
     
     var sectionsDictionary: [String: String] = [
-        "Sports": "The latest in sports from across the globe, from cricket to soccer.",
-        "Technology": "The latest products and tech business moves.",
-        "Business": "Your look at the world of finance and business, always up to date.",
-        "Science": "The latest in the world of science, from studies to surreal.",
-        "Health": "An apple a day.",
-        "Arts": "From Picasso to Van Gogh, get cultured.",
-        "Style": "The latest from Paris and Milan, right in your hands.",
-        "Travel": "Go jet-setting across the globe from your couch.",
-        "World": "Don't miss a single thing in all corners of the globe."]
+        "Engadget": "engadget.png",
+        "Gizmodo": "gizmodo.png",
+        "LifeHacker": "lifehacker.png",
+        "Mashable": "mashable.svg",
+        "Medium": "medium.png",
+        "New York Times Technology": "newyorktimes.png",
+        "TechCrunch": "techcrunch.png",
+        "TechRadar": "techradar.png",
+        "Wired": "wired.png"]
     
     var sectionsSelected: Set<String> = []
 
@@ -61,9 +63,11 @@ class SectionPickerTableViewController: UITableViewController {
         
         var sectionNames = Array(sectionsDictionary.keys)
         let sectionName = sectionNames[indexPath.row]
-        let sectionDescription = sectionsDictionary[sectionName]
-        cell.textLabel?.text = sectionName
-        cell.detailTextLabel?.text = sectionDescription
+        let sectionImage = UIImage(named: sectionsDictionary[sectionName]!)
+        print(sectionsDictionary[sectionName]!)
+        print(sectionImage)
+        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.imageView?.image = sectionImage
 
         return cell
     }
@@ -81,7 +85,10 @@ class SectionPickerTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let limit = 4
+        Optimizely.codeBlocksWithKey(sectionNumberBlockKey,
+                                     blockOne: { self.limit = 3 },
+                                     defaultBlock: { self.limit = 4 })
+    
         if let sr = tableView.indexPathsForSelectedRows {
             if sr.count == limit {
                 let alertController = UIAlertController(title: "Limit Reached", message:
@@ -139,16 +146,16 @@ class SectionPickerTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Load live variable
-        var key = OptimizelyVariableKey.optimizelyKeyWithKey("myKey", defaultNSString: "myValue")
-        var liveVariable:String = Optimizely.stringForKey(key)
-        
-        // Use the liveVariable
-        if(liveVariable == "VarA") {
-            var alert:UIAlertView = UIAlertView(title: "AB Test", message: "This alert only shows if liveVariable equals VarA", delegate: self, cancelButtonTitle: "Close")
-            alert.show()
-        }
-        
-        print(defaults.objectForKey("sections"))
+//        var key = OptimizelyVariableKey.optimizelyKeyWithKey("myKey", defaultNSString: "myValue")
+//        var liveVariable:String = Optimizely.stringForKey(key)
+//        
+//        // Use the liveVariable
+//        if(liveVariable == "VarA") {
+//            var alert:UIAlertView = UIAlertView(title: "AB Test", message: "This alert only shows if liveVariable equals VarA", delegate: self, cancelButtonTitle: "Close")
+//            alert.show()
+//        }
+//        
+//        print(defaults.objectForKey("sections"))
     }
 
 }

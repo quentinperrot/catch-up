@@ -20,6 +20,15 @@
 		4A525D261CD1D0DC00CF3D67 /* PersonalizedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D251CD1D0DC00CF3D67 /* PersonalizedViewController.swift */; };
 		4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */; };
 		4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */; };
+		4AA0A58F1CEC4D16000F1212 /* wired.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5861CEC4D16000F1212 /* wired.png */; };
+		4AA0A5901CEC4D16000F1212 /* techradar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5871CEC4D16000F1212 /* techradar.png */; };
+		4AA0A5911CEC4D16000F1212 /* techcrunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5881CEC4D16000F1212 /* techcrunch.png */; };
+		4AA0A5921CEC4D16000F1212 /* newyorktimes.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5891CEC4D16000F1212 /* newyorktimes.png */; };
+		4AA0A5931CEC4D16000F1212 /* medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58A1CEC4D16000F1212 /* medium.png */; };
+		4AA0A5941CEC4D16000F1212 /* mashable.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58B1CEC4D16000F1212 /* mashable.svg */; };
+		4AA0A5951CEC4D16000F1212 /* lifehacker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58C1CEC4D16000F1212 /* lifehacker.png */; };
+		4AA0A5961CEC4D16000F1212 /* gizmodo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58D1CEC4D16000F1212 /* gizmodo.png */; };
+		4AA0A5971CEC4D16000F1212 /* engadget.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58E1CEC4D16000F1212 /* engadget.png */; };
 		4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */; };
 		A2EE2A08A524263370CC61AC /* Pods_CatchUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */; };
 		C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B493A1CD2238D00A448EF /* SweetAlert.swift */; };
@@ -65,6 +74,15 @@
 		4A525D251CD1D0DC00CF3D67 /* PersonalizedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalizedViewController.swift; sourceTree = "<group>"; };
 		4A525D271CD1D0F000CF3D67 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		4A525D291CD1D0F800CF3D67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4AA0A5861CEC4D16000F1212 /* wired.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wired.png; sourceTree = "<group>"; };
+		4AA0A5871CEC4D16000F1212 /* techradar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techradar.png; sourceTree = "<group>"; };
+		4AA0A5881CEC4D16000F1212 /* techcrunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techcrunch.png; sourceTree = "<group>"; };
+		4AA0A5891CEC4D16000F1212 /* newyorktimes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newyorktimes.png; sourceTree = "<group>"; };
+		4AA0A58A1CEC4D16000F1212 /* medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium.png; sourceTree = "<group>"; };
+		4AA0A58B1CEC4D16000F1212 /* mashable.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mashable.svg; sourceTree = "<group>"; };
+		4AA0A58C1CEC4D16000F1212 /* lifehacker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lifehacker.png; sourceTree = "<group>"; };
+		4AA0A58D1CEC4D16000F1212 /* gizmodo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gizmodo.png; sourceTree = "<group>"; };
+		4AA0A58E1CEC4D16000F1212 /* engadget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engadget.png; sourceTree = "<group>"; };
 		4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7BC10FDF9C192CCBBC8FA529 /* Pods-CatchUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.release.xcconfig"; sourceTree = "<group>"; };
 		8675EF76CE4433BC7FAFF77B /* Pods-CatchUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +195,15 @@
 		C33642F11CE407EE002D03CA /* Image Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4AA0A5861CEC4D16000F1212 /* wired.png */,
+				4AA0A5871CEC4D16000F1212 /* techradar.png */,
+				4AA0A5881CEC4D16000F1212 /* techcrunch.png */,
+				4AA0A5891CEC4D16000F1212 /* newyorktimes.png */,
+				4AA0A58A1CEC4D16000F1212 /* medium.png */,
+				4AA0A58B1CEC4D16000F1212 /* mashable.svg */,
+				4AA0A58C1CEC4D16000F1212 /* lifehacker.png */,
+				4AA0A58D1CEC4D16000F1212 /* gizmodo.png */,
+				4AA0A58E1CEC4D16000F1212 /* engadget.png */,
 				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
 				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
 				C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */,
@@ -240,7 +267,7 @@
 				TargetAttributes = {
 					4A525CF71CD1B7FA00CF3D67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = KDS74D59Z7;
+						DevelopmentTeam = E7SDH3DXWL;
 					};
 				};
 			};
@@ -269,23 +296,32 @@
 			files = (
 				C3EEBD511CD214F800E638CF /* nyt-logo.png in Resources */,
 				C3EEBD471CD2045000E638CF /* Camping_intro.png in Resources */,
+				4AA0A5971CEC4D16000F1212 /* engadget.png in Resources */,
 				C3EEBD491CD2075B00E638CF /* 404.png in Resources */,
 				C3EEBD551CD21B6200E638CF /* placeholder.png in Resources */,
 				C33642E91CE3FFEC002D03CA /* Hearts-100@2x.png in Resources */,
 				C33642EA1CE3FFEC002D03CA /* Settings-100@2x.png in Resources */,
+				4AA0A5931CEC4D16000F1212 /* medium.png in Resources */,
 				C3EEBD2F1CD1FE0D00E638CF /* heart-7.png in Resources */,
 				C33642E81CE3FFEC002D03CA /* Bullish-100@2x.png in Resources */,
+				4AA0A5941CEC4D16000F1212 /* mashable.svg in Resources */,
 				C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */,
 				4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */,
 				4A525D091CD1B7FA00CF3D67 /* LaunchScreen.storyboard in Resources */,
+				4AA0A58F1CEC4D16000F1212 /* wired.png in Resources */,
+				4AA0A5921CEC4D16000F1212 /* newyorktimes.png in Resources */,
+				4AA0A5961CEC4D16000F1212 /* gizmodo.png in Resources */,
 				C3EEBD331CD1FE5100E638CF /* paper-box-7.png in Resources */,
 				C3EEBD321CD1FE5100E638CF /* list-fat-7.png in Resources */,
 				C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */,
 				4A525D061CD1B7FA00CF3D67 /* Assets.xcassets in Resources */,
+				4AA0A5911CEC4D16000F1212 /* techcrunch.png in Resources */,
 				C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */,
 				C33642F01CE40059002D03CA /* Settings-100.png in Resources */,
 				C3EEBD351CD1FE5900E638CF /* gear-7.png in Resources */,
 				C33642EE1CE40059002D03CA /* Bullish-100.png in Resources */,
+				4AA0A5901CEC4D16000F1212 /* techradar.png in Resources */,
+				4AA0A5951CEC4D16000F1212 /* lifehacker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SerendipityLabs.Catch-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CatchUp/CatchUp-Bridging-Header.h";
@@ -489,7 +525,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SerendipityLabs.Catch-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CatchUp/CatchUp-Bridging-Header.h";
