@@ -10,7 +10,7 @@ import UIKit
 
 class CardTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var publicationLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var sourceLogo: UIImageView!
