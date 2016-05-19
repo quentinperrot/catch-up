@@ -1,6 +1,16 @@
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  CatchUp-Bridging-Header.h
+//  CatchUp
+//
+//  Created by Quentin Perrot on 5/19/16.
+//  Copyright © 2016 Stanford University. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef CatchUp_Bridging_Header_h
+#define CatchUp_Bridging_Header_h
+#import "Flurry.h"
 #import <Optimizely/Optimizely.h>
+
+
+
+#endif /* CatchUp_Bridging_Header_h */

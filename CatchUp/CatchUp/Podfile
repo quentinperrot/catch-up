@@ -7,6 +7,8 @@ target 'CatchUp' do
   pod ‘FeedlyKit’
   pod 'NXOAuth2Client', '~> 1.2.8'
   pod 'Optimizely-iOS-SDK'
+  pod ‘Flurry-iOS-SDK/FlurrySDK’
+
 
   # Pods for CatchUp
 

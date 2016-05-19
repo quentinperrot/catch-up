@@ -82,6 +82,7 @@ class SectionPickerTableViewController: UITableViewController {
         UIGraphicsEndImageContext()
         
         return cell
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -156,6 +157,15 @@ class SectionPickerTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let allSectionsChosen = defaults.objectForKey("sections") as! [String]
+        let sourceNumber = allSectionsChosen.count
+        
+        let articleParams = ["Sources": allSectionsChosen]
+        let articleParams1 = ["Number_of_Sources": sourceNumber]
+        
+        Flurry.logEvent("Sources_Chosen", withParameters: articleParams)
+        Flurry.logEvent("Number_Of_Sources_Chosen", withParameters: articleParams1)
         
         // Load live variable
 //        var key = OptimizelyVariableKey.optimizelyKeyWithKey("myKey", defaultNSString: "myValue")
