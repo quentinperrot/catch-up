@@ -42,6 +42,8 @@
 		C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */; };
 		C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */; };
 		C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */; };
+		C3DB57041CED9A3500D573CF /* Notie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB57021CED9A3500D573CF /* Notie.swift */; };
+		C3DB57051CED9A3500D573CF /* NotieStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB57031CED9A3500D573CF /* NotieStyle.swift */; };
 		C3DBE04B1CE40AEC009F699D /* AFDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */; };
 		C3DBE04D1CE41264009F699D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04C1CE41264009F699D /* ProgressBar.swift */; };
 		C3DBE04F1CE414A3009F699D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBE04E1CE414A3009F699D /* ProgressView.swift */; };
@@ -97,6 +99,8 @@
 		C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLogo.png; sourceTree = "<group>"; };
 		C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sampleStory.jpg; sourceTree = "<group>"; };
+		C3DB57021CED9A3500D573CF /* Notie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notie.swift; sourceTree = "<group>"; };
+		C3DB57031CED9A3500D573CF /* NotieStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotieStyle.swift; sourceTree = "<group>"; };
 		C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDateExtension.swift; sourceTree = "<group>"; };
 		C3DBE04C1CE41264009F699D /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C3DBE04E1CE414A3009F699D /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				C3DBE04A1CE40AEC009F699D /* AFDateExtension.swift */,
 				C3EEBD4A1CD2107700E638CF /* XMLParser.swift */,
 				C3DBE04C1CE41264009F699D /* ProgressBar.swift */,
+				C3DB57021CED9A3500D573CF /* Notie.swift */,
+				C3DB57031CED9A3500D573CF /* NotieStyle.swift */,
 				C33642F11CE407EE002D03CA /* Image Resources */,
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
@@ -395,8 +401,10 @@
 				4A525D1C1CD1B89900CF3D67 /* Section+CoreDataProperties.swift in Sources */,
 				C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */,
 				C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */,
+				C3DB57051CED9A3500D573CF /* NotieStyle.swift in Sources */,
 				4A525CFC1CD1B7FA00CF3D67 /* AppDelegate.swift in Sources */,
 				C3DBE04F1CE414A3009F699D /* ProgressView.swift in Sources */,
+				C3DB57041CED9A3500D573CF /* Notie.swift in Sources */,
 				C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */,
 				C3EEBD4B1CD2107700E638CF /* XMLParser.swift in Sources */,
 			);
