@@ -41,14 +41,8 @@
 		C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642EC1CE40059002D03CA /* Hearts-100.png */; };
 		C33642F01CE40059002D03CA /* Settings-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642ED1CE40059002D03CA /* Settings-100.png */; };
 		C34A15121CED3A28008259A5 /* mashable.png in Resources */ = {isa = PBXBuildFile; fileRef = C34A15111CED3A28008259A5 /* mashable.png */; };
+		C36942AF1CEE67DF0017C05F /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36942AE1CEE67DF0017C05F /* UIImage+Gif.swift */; };
 		C3772E231CEDB709001CC7F2 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E221CEDB709001CC7F2 /* LoadingIndicatorView.swift */; };
-		C3772E2B1CEDBBDF001CC7F2 /* AnimatableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E241CEDBBDF001CC7F2 /* AnimatableImageView.swift */; };
-		C3772E2C1CEDBBDF001CC7F2 /* AnimatedFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E251CEDBBDF001CC7F2 /* AnimatedFrame.swift */; };
-		C3772E2D1CEDBBDF001CC7F2 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E261CEDBBDF001CC7F2 /* Animator.swift */; };
-		C3772E2E1CEDBBDF001CC7F2 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E271CEDBBDF001CC7F2 /* ArrayExtension.swift */; };
-		C3772E2F1CEDBBDF001CC7F2 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E281CEDBBDF001CC7F2 /* CGSizeExtension.swift */; };
-		C3772E301CEDBBDF001CC7F2 /* ImageSourceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E291CEDBBDF001CC7F2 /* ImageSourceHelpers.swift */; };
-		C3772E311CEDBBDF001CC7F2 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3772E2A1CEDBBDF001CC7F2 /* UIImageExtension.swift */; };
 		C3772E331CEDBBF0001CC7F2 /* checkmark.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3772E321CEDBBF0001CC7F2 /* checkmark.gif */; };
 		C3772E351CEDBE40001CC7F2 /* start.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3772E341CEDBE40001CC7F2 /* start.gif */; };
 		C3772E371CEDBE92001CC7F2 /* blueBG.png in Resources */ = {isa = PBXBuildFile; fileRef = C3772E361CEDBE92001CC7F2 /* blueBG.png */; };
@@ -114,14 +108,8 @@
 		C33642EC1CE40059002D03CA /* Hearts-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hearts-100.png"; sourceTree = "<group>"; };
 		C33642ED1CE40059002D03CA /* Settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-100.png"; sourceTree = "<group>"; };
 		C34A15111CED3A28008259A5 /* mashable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mashable.png; sourceTree = "<group>"; };
+		C36942AE1CEE67DF0017C05F /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		C3772E221CEDB709001CC7F2 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
-		C3772E241CEDBBDF001CC7F2 /* AnimatableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableImageView.swift; sourceTree = "<group>"; };
-		C3772E251CEDBBDF001CC7F2 /* AnimatedFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedFrame.swift; sourceTree = "<group>"; };
-		C3772E261CEDBBDF001CC7F2 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		C3772E271CEDBBDF001CC7F2 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		C3772E281CEDBBDF001CC7F2 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
-		C3772E291CEDBBDF001CC7F2 /* ImageSourceHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSourceHelpers.swift; sourceTree = "<group>"; };
-		C3772E2A1CEDBBDF001CC7F2 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C3772E321CEDBBF0001CC7F2 /* checkmark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = checkmark.gif; sourceTree = "<group>"; };
 		C3772E341CEDBE40001CC7F2 /* start.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = start.gif; sourceTree = "<group>"; };
 		C3772E361CEDBE92001CC7F2 /* blueBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueBG.png; sourceTree = "<group>"; };
@@ -202,13 +190,7 @@
 				C3DB57021CED9A3500D573CF /* Notie.swift */,
 				C3DB57031CED9A3500D573CF /* NotieStyle.swift */,
 				C3772E221CEDB709001CC7F2 /* LoadingIndicatorView.swift */,
-				C3772E241CEDBBDF001CC7F2 /* AnimatableImageView.swift */,
-				C3772E251CEDBBDF001CC7F2 /* AnimatedFrame.swift */,
-				C3772E261CEDBBDF001CC7F2 /* Animator.swift */,
-				C3772E271CEDBBDF001CC7F2 /* ArrayExtension.swift */,
-				C3772E281CEDBBDF001CC7F2 /* CGSizeExtension.swift */,
-				C3772E291CEDBBDF001CC7F2 /* ImageSourceHelpers.swift */,
-				C3772E2A1CEDBBDF001CC7F2 /* UIImageExtension.swift */,
+				C36942AE1CEE67DF0017C05F /* UIImage+Gif.swift */,
 				C33642F11CE407EE002D03CA /* Image Resources */,
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
@@ -449,30 +431,24 @@
 				C3E076751CD1E22000AA6CCB /* CAPSPageMenu.swift in Sources */,
 				4A525D2A1CD1D0F800CF3D67 /* SettingsViewController.swift in Sources */,
 				C3DBE04D1CE41264009F699D /* ProgressBar.swift in Sources */,
-				C3772E2D1CEDBBDF001CC7F2 /* Animator.swift in Sources */,
 				4A525D041CD1B7FA00CF3D67 /* CatchUp.xcdatamodeld in Sources */,
-				C3772E2B1CEDBBDF001CC7F2 /* AnimatableImageView.swift in Sources */,
 				4A525D241CD1BC2B00CF3D67 /* SectionPickerTableViewController.swift in Sources */,
 				4A525D261CD1D0DC00CF3D67 /* PersonalizedViewController.swift in Sources */,
 				4A525CFE1CD1B7FA00CF3D67 /* ViewController.swift in Sources */,
 				C3DBE04B1CE40AEC009F699D /* AFDateExtension.swift in Sources */,
 				4A525D281CD1D0F000CF3D67 /* PopularViewController.swift in Sources */,
-				C3772E2C1CEDBBDF001CC7F2 /* AnimatedFrame.swift in Sources */,
 				4A525D1F1CD1B89900CF3D67 /* Item.swift in Sources */,
 				4A525D1C1CD1B89900CF3D67 /* Section+CoreDataProperties.swift in Sources */,
 				C3772E231CEDB709001CC7F2 /* LoadingIndicatorView.swift in Sources */,
 				C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */,
+				C36942AF1CEE67DF0017C05F /* UIImage+Gif.swift in Sources */,
 				C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */,
-				C3772E311CEDBBDF001CC7F2 /* UIImageExtension.swift in Sources */,
 				C3DB57051CED9A3500D573CF /* NotieStyle.swift in Sources */,
-				C3772E2F1CEDBBDF001CC7F2 /* CGSizeExtension.swift in Sources */,
 				4A525CFC1CD1B7FA00CF3D67 /* AppDelegate.swift in Sources */,
 				C3DBE04F1CE414A3009F699D /* ProgressView.swift in Sources */,
 				C3DB57041CED9A3500D573CF /* Notie.swift in Sources */,
 				C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */,
 				C3EEBD4B1CD2107700E638CF /* XMLParser.swift in Sources */,
-				C3772E301CEDBBDF001CC7F2 /* ImageSourceHelpers.swift in Sources */,
-				C3772E2E1CEDBBDF001CC7F2 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

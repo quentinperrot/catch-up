@@ -253,20 +253,17 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                     var fixedFrame = self.testView.frame;
                     fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
                     self.testView.frame = fixedFrame;
-                    print(cellsScrolled)
                 }
             }
             
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
                 if (cellsScrolled <= 5) {
-                    print(scrollView.contentSize.height)
                     testView.removeFromSuperview()
                     makeProgressBar(5)
                     cellsScrolled = 5
                     var fixedFrame = self.testView.frame;
                     fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
                     self.testView.frame = fixedFrame;
-                    print(cellsScrolled)
                 }
                 
                 
@@ -298,20 +295,18 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                             
                             notie.dismiss()
                             
-                            
                             let bgName = "blueBG.png"
                             let bgImage = UIImage(named: bgName)
                             let bgView = UIImageView(image: bgImage!)
-                            
                             bgView.frame = CGRectMake(0, 0, 375, 660) // set up according to your requirements
-                            
-                            let imageView = AnimatableImageView(frame: CGRectMake(0, 120, 370, 300))
-                            imageView.animateWithImage(named: "start.gif")
                             self.overlayView!.addSubview(bgView)
-                            
+
+                            let imageName = UIImage.gifWithName("start")
+                            let imageView = UIImageView(image: imageName!)
+                            imageView.frame = CGRectMake(0, 120, 370, 300) // set up according to your requirements
                             self.overlayView!.addSubview(imageView)
-                            self.caughtUp = 1
                             
+                            self.caughtUp = 1
                         }
                         
                         notie.rightButtonAction = {
