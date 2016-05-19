@@ -55,7 +55,7 @@ class PopularViewController: UIViewController {
         // or use pageMenu controller in you view hierachy as desired
         self.view.addSubview(pageMenu!.view)
         
-        makeProgressBar(1)
+//        makeProgressBar(1)
     
         
         // Do any additional setup after loading the view.

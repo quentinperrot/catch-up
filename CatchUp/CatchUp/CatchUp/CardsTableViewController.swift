@@ -11,13 +11,15 @@ import SafariServices
 
 class CardsTableViewController: UITableViewController, SFSafariViewControllerDelegate, XMLParserDelegate {
     
-    // Asycnhronous Loading Properties 
+    // Asycnhronous Loading Properties
     
     var refreshCtrl: UIRefreshControl!
     var tableData:[AnyObject]!
     var task: NSURLSessionDownloadTask!
     var session: NSURLSession!
     var cache: NSCache!
+    
+    var testView: ProgressView!
     
     var xmlParser : XMLParser!
     
@@ -45,7 +47,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         
         self.tableView.rowHeight = 425
         self.edgesForExtendedLayout = UIRectEdge.All
-        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:49.0, right: 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:0.0, right: 0.0)
         
         // Parser commands
         let url = NSURL(string: sectionsDictionary[self.title!]!)
@@ -61,10 +63,20 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.tableData = []
         self.cache = NSCache()
         
+        makeProgressBar(1)
+        
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    public func makeProgressBar(value: Int) {
+        let testFrame : CGRect = CGRectMake(0,560,375,8)
+        testView = ProgressView(frame: testFrame)
+        testView.cellsScrolledChange(value)
+        self.view.addSubview(testView)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,7 +102,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         var imageLinks = [String]()
         var imageLink = ""
         
-        // Set Publication 
+        // Set Publication
         
         
         
@@ -137,7 +149,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                 }
             }
             
-            // Load Image 
+            // Load Image
             if (self.cache.objectForKey(imageLink) != nil) {
                 cell.cardImage.image = self.cache.objectForKey(imageLink) as? UIImage
             } else {
@@ -145,6 +157,8 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                 asynchronousLoading(url!, indexPath: indexPath, tableView: tableView, key: imageLink, cell: cell)
             }
         }
+        
+        cell.publicationLabel?.text = self.title
         
         return cell
     }
@@ -181,35 +195,88 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+        
+        var fixedFrame = self.testView.frame;
+        fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+        self.testView.frame = fixedFrame;
+        cellsScrolled = 1
+        
+        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 875) {
+                testView.removeFromSuperview()
+                makeProgressBar(2)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+        }
+        
+        
+        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1310) {
+                testView.removeFromSuperview()
+                makeProgressBar(3)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+        }
+        
+        
+        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1725) {
+                testView.removeFromSuperview()
+                makeProgressBar(4)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+        }
+        
+        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
+            print(scrollView.contentSize.height)
+                testView.removeFromSuperview()
+                makeProgressBar(5)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+    
+                
+                // CAUGHT UP
+                
+                            let seconds = 2.3
+                            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                
+                            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                
+                                let refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
+//                                    var overlay : UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+//                                    
+//                                    let imageName = "newyorktimes.png"
+//                                    let image = UIImage(named: imageName)
+//                                    let imageView = UIImageView(image: image!)
+//                                    
+//                                    imageView.frame = CGRectMake(0, 0, 300, 300) // set up according to your requirements
+//                                    
+//                                    var doneBtn : UIButton = UIButton(frame: CGRectMake(0, 0, 100, 100)) // set up according to your requirements
+//                                    doneBtn.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+//                                    
+//                                    overlay.addSubview(imageView)
+//                                    overlay.addSubview(doneBtn)
+//                                    
+//                                    self.view.addSubview(overlay)
+                                }))
+                
+                                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
+                                    self.tableRowNumber += 5
+                                    self.tableView.reloadData()
+                                }))
+                
+                                self.presentViewController(refreshAlert, animated: true, completion: nil)
+                
+                            })
             
-            
-            cellsScrolled = 5
-            
-            
-            
-            //
-            //            let seconds = 2.3
-            //            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            //            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            //
-            //            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-            //
-            //                var refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
-            //
-            //                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
-            //                }))
-            //
-            //                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
-            //                    self.tableRowNumber += 5
-            //                    self.tableView.reloadData()
-            //                }))
-            //
-            //                self.presentViewController(refreshAlert, animated: true, completion: nil)
-            //
-            //            })
-            
-            
+                
+                // END CAUGHT UP
+                
+                
         }
     }
     
