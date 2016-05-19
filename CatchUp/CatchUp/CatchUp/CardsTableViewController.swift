@@ -21,7 +21,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     var notieShown = 0
     var testView: ProgressView!
     var overlayView: UIView?
-    
+    var caughtUp = 0
     var xmlParser : XMLParser!
     
     func parsingWasFinished() {
@@ -68,6 +68,12 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         
         
         
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -202,103 +208,109 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        var fixedFrame = self.testView.frame;
-        fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-        self.testView.frame = fixedFrame;
-        cellsScrolled = 1
-        
         if (overlayView != nil) {
             var overlayFixed = self.overlayView!.frame
-            fixedFrame.origin.y = scrollView.contentOffset.y
-            self.overlayView!.frame = fixedFrame
+            overlayFixed.origin.y = scrollView.contentOffset.y
+            self.overlayView!.frame = overlayFixed
         }
         
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 875) {
-            testView.removeFromSuperview()
-            makeProgressBar(2)
+        if (caughtUp == 0) {
+            
+            
             var fixedFrame = self.testView.frame;
             fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
             self.testView.frame = fixedFrame;
-        }
-        
-        
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1310) {
-            testView.removeFromSuperview()
-            makeProgressBar(3)
-            var fixedFrame = self.testView.frame;
-            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-            self.testView.frame = fixedFrame;
-        }
-        
-        
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1725) {
-            testView.removeFromSuperview()
-            makeProgressBar(4)
-            var fixedFrame = self.testView.frame;
-            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-            self.testView.frame = fixedFrame;
-        }
-        
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
-            print(scrollView.contentSize.height)
-            testView.removeFromSuperview()
-            makeProgressBar(5)
-            var fixedFrame = self.testView.frame;
-            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-            self.testView.frame = fixedFrame;
+            cellsScrolled = 1
             
             
-            // CAUGHT UP
             
-            let seconds = 1.3
-            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            
-            if (self.notieShown == 0) {
-
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                self.overlayView = UIView(frame: CGRectMake(0, scrollView.contentOffset.y, self.view.frame.size.width, self.view.frame.size.height))
-                
-                //                                    let imageName = "newyorktimes.png"
-                //                                    let image = UIImage(named: imageName)
-                //                                    let imageView = UIImageView(image: image!)
-                //
-                //                                    imageView.frame = CGRectMake(0, 0, 300, 300) // set up according to your requirements
-                //
-                //                                    var doneBtn : UIButton = UIButton(frame: CGRectMake(0, 0, 100, 100)) // set up according to your requirements
-                //                                    doneBtn.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
-                //
-                //                                    overlay.addSubview(imageView)
-                
-                self.view.addSubview(self.overlayView!)
-                
-                
-                let notie = Notie(view: self.overlayView!, message: "You're all caught up with \(self.title!)!", style: .Confirm)
-                
-                notie.leftButtonTitle = "Great!"
-                notie.rightButtonTitle = "Load More News"
-                
-                notie.leftButtonAction = {
-                    // Add your left button action here
-                    notie.dismiss()
-                }
-                
-                notie.rightButtonAction = {
-                    self.tableRowNumber += 5
-                    self.tableView.reloadData()
-                    notie.dismiss()
-                }
-                
-                    notie.show()
-                
-            })
-                self.notieShown = 1
+            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 875) {
+                testView.removeFromSuperview()
+                makeProgressBar(2)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
             }
             
             
-            // END CAUGHT UP
+            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1310) {
+                testView.removeFromSuperview()
+                makeProgressBar(3)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+            }
             
             
+            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1725) {
+                testView.removeFromSuperview()
+                makeProgressBar(4)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+            }
+            
+            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
+                print(scrollView.contentSize.height)
+                testView.removeFromSuperview()
+                makeProgressBar(5)
+                var fixedFrame = self.testView.frame;
+                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                self.testView.frame = fixedFrame;
+                
+                
+                // CAUGHT UP
+                
+                let seconds = 1.3
+                let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                
+                if (self.notieShown == 0) {
+                    
+                    dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                        self.overlayView = UIView(frame: CGRectMake(0, scrollView.contentOffset.y, self.view.frame.size.width, self.view.frame.size.height))
+                        self.view.addSubview(self.overlayView!)
+                        
+                        let notie = Notie(view: self.overlayView!, message: "You're all caught up with \(self.title!)!", style: .Confirm)
+                        
+                        notie.leftButtonTitle = "Great!"
+                        notie.rightButtonTitle = "Load More News"
+                        
+                        notie.leftButtonAction = {
+                            notie.dismiss()
+                            
+                            
+                            let bgName = "blueBG.png"
+                            let bgImage = UIImage(named: bgName)
+                            let bgView = UIImageView(image: bgImage!)
+                            
+                            bgView.frame = CGRectMake(0, 0, 375, 660) // set up according to your requirements
+                            
+                            let imageView = AnimatableImageView(frame: CGRectMake(0, 120, 370, 300))
+                            imageView.animateWithImage(named: "start.gif")
+                            self.overlayView!.addSubview(bgView)
+                            
+                            self.overlayView!.addSubview(imageView)
+                            self.caughtUp = 1
+                            
+                        }
+                        
+                        notie.rightButtonAction = {
+                            self.tableRowNumber += 5
+                            self.tableView.reloadData()
+                            notie.dismiss()
+                        }
+                        
+                        notie.show()
+                        
+                    })
+                    self.notieShown = 1
+                }
+                
+                
+                // END CAUGHT UP
+                
+            }
         }
     }
     

@@ -73,7 +73,7 @@
                     <connections>
                         <segue destination="sex-nV-ibM" kind="relationship" relationship="viewControllers" id="XdW-RM-kl2"/>
                         <segue destination="E76-MM-8vE" kind="relationship" relationship="viewControllers" id="d6T-iP-5By"/>
-                        <segue destination="7Le-sq-kr4" kind="relationship" relationship="viewControllers" id="1qV-Ed-ipo"/>
+                        <segue destination="C1g-6S-r5D" kind="relationship" relationship="viewControllers" id="1qV-Ed-ipo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29C-q3-ttV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,15 +309,37 @@
                             <outlet property="delegate" destination="7Le-sq-kr4" id="vQz-ix-0Nr"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Customize" image="Bullish-100.png" id="E5B-VD-Jvq"/>
                     <navigationItem key="navigationItem" title="Sources" prompt="What do you really care about? Select up to 4 items." id="Hcu-dl-wbk">
-                        <barButtonItem key="rightBarButtonItem" title="Continue" id="gGt-Xf-Gec"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="gGt-Xf-Gec">
+                            <connections>
+                                <action selector="doneClicked:" destination="7Le-sq-kr4" id="7y8-xY-JkD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4w-gF-Vcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173" y="574"/>
+            <point key="canvasLocation" x="4333.5" y="567.5"/>
+        </scene>
+        <!--Customize-->
+        <scene sceneID="Cdg-vt-q08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C1g-6S-r5D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Customize" image="Bullish-100.png" id="E5B-VD-Jvq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3eX-pj-vic">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Le-sq-kr4" kind="relationship" relationship="rootViewController" id="y9e-o1-aUL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMb-Hs-OBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3746.5" y="567.5"/>
         </scene>
     </scenes>
     <resources>

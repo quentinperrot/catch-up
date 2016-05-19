@@ -67,6 +67,56 @@ class PersonalizedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidLoad()
+        // Array to keep track of controllers in page menu
+        var controllerArray : [UIViewController] = []
+        
+        // Create variables for all view controllers you want to put in the
+        // page menu, initialize them, and add each to the controller array.
+        // (Can be any UIViewController subclass)
+        // Make sure the title property of all view controllers is set
+        // Example:
+        
+        let allSectionsChosen = defaults.objectForKey("sections") as! [String]
+        
+        for section in allSectionsChosen {
+            let vc = storyboard!.instantiateViewControllerWithIdentifier("cardsViewController")
+            vc.title = section
+            controllerArray.append(vc)
+        }
+        
+        let colorBar = UIColor(netHex:0x18A9FF)
+        let colorUnselected = UIColor(netHex:0xDFDFDF)
+        
+        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
+        // Example:
+        let parameters: [CAPSPageMenuOption] = [
+            .MenuItemSeparatorWidth(4.3),
+            .UseMenuLikeSegmentedControl(false),
+            .MenuItemSeparatorPercentageHeight(0.1),
+            .ScrollMenuBackgroundColor(colorBar),
+            .UnselectedMenuItemLabelColor(UIColor.whiteColor()),
+            .MenuHeight(50)
+        ]
+        
+        // Initialize page menu with controller array, frame, and optional parameters
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        
+        // Lastly add page menu as subview of base view controller view
+        // or use pageMenu controller in you view hierachy as desired
+        self.view.addSubview(pageMenu!.view)
+        //
+        //        let progressInit = ProgressView
+        //        self.view.addSubview(progessInit.view)
+        
+        
+        //        makeProgressBar(1)
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

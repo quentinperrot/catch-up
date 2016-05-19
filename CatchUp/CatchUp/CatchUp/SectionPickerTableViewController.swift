@@ -76,7 +76,7 @@ class SectionPickerTableViewController: UITableViewController {
         
         let itemSize = CGSizeMake(150, 30)
         UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.mainScreen().scale)
-        let imageRect = CGRectMake((375/2)-(150/2), 0.0, itemSize.width, itemSize.height)
+        let imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height)
         cell.imageView?.image?.drawInRect(imageRect)
         cell.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -91,6 +91,20 @@ class SectionPickerTableViewController: UITableViewController {
         defaults.setObject(Array(sectionsSelected), forKey: "sections")
     }
     
+    @IBAction func doneClicked(sender: AnyObject) {
+        
+        LoadingIndicatorView.show("Saving settings...")
+        
+        let seconds = 1.9
+        let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+
+
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            LoadingIndicatorView.hide()
+        })
+    }
+
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
         sectionsSelected.remove(Array(sectionsDictionary.keys)[indexPath.row])
@@ -166,7 +180,10 @@ class SectionPickerTableViewController: UITableViewController {
         
         Flurry.logEvent("Sources_Chosen", withParameters: articleParams)
         Flurry.logEvent("Number_Of_Sources_Chosen", withParameters: articleParams1)
+
+        LoadingIndicatorView.show("Loading")
         
+
         // Load live variable
 //        var key = OptimizelyVariableKey.optimizelyKeyWithKey("myKey", defaultNSString: "myValue")
 //        var liveVariable:String = Optimizely.stringForKey(key)
