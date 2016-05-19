@@ -72,8 +72,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="sex-nV-ibM" kind="relationship" relationship="viewControllers" id="XdW-RM-kl2"/>
-                        <segue destination="3PM-IW-nCb" kind="relationship" relationship="viewControllers" id="q7n-yo-dxZ"/>
                         <segue destination="E76-MM-8vE" kind="relationship" relationship="viewControllers" id="d6T-iP-5By"/>
+                        <segue destination="7Le-sq-kr4" kind="relationship" relationship="viewControllers" id="1qV-Ed-ipo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29C-q3-ttV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,42 +99,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axr-p3-3oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3091.5" y="-206.5"/>
-        </scene>
-        <!--Popular-->
-        <scene sceneID="x4e-XS-dzy">
-            <objects>
-                <viewController title="Popular" id="3PM-IW-nCb" customClass="PopularViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="enY-0l-Kma"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kv7-ge-3R6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aOQ-rF-dKH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="404.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-sQ-sz7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="whoops!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGm-rx-3TF">
-                                <rect key="frame" x="124" y="393" width="126" height="40"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="we're still working on this bit, sorry." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Er-7T-coz">
-                                <rect key="frame" x="54" y="441" width="266" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Popular" image="Bullish-100.png" id="qBf-YH-0ZF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tqT-oW-4H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3091.5" y="542.5"/>
         </scene>
         <!--cardsViewController-->
         <scene sceneID="akm-cE-Y3t">
@@ -308,6 +272,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvc-Un-pcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1643.5" y="225.5"/>
+        </scene>
+        <!--Sources-->
+        <scene sceneID="sE3-kp-MXd">
+            <objects>
+                <tableViewController id="7Le-sq-kr4" customClass="SectionPickerTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="vfi-yn-PeO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="s2E-12-nzW" rowHeight="100" style="IBUITableViewCellStyleDefault" id="gKz-We-4h3">
+                                <rect key="frame" x="0.0" y="122" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gKz-We-4h3" id="yUW-sc-wj7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXK-fh-syt">
+                                            <rect key="frame" x="15" y="8" width="345" height="80"/>
+                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="345" id="s2E-12-nzW">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Le-sq-kr4" id="d2c-Fv-9l8"/>
+                            <outlet property="delegate" destination="7Le-sq-kr4" id="vQz-ix-0Nr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Customize" image="Bullish-100.png" id="E5B-VD-Jvq"/>
+                    <navigationItem key="navigationItem" title="Sources" prompt="What do you really care about? Select up to 4 items." id="Hcu-dl-wbk">
+                        <barButtonItem key="rightBarButtonItem" title="Continue" id="gGt-Xf-Gec"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4w-gF-Vcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3173" y="574"/>
         </scene>
     </scenes>
     <resources>
