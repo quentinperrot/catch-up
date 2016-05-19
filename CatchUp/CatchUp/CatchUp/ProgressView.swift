@@ -16,8 +16,17 @@ class ProgressView: UIView {
         if cellsScrolled == 1 {
             ProgressBar.drawCanvas1()
         }
+        if cellsScrolled == 2 {
+            ProgressBar.drawCanvas2()
+        }
         if cellsScrolled == 3 {
             ProgressBar.drawCanvas3()
+        }
+        if cellsScrolled == 4 {
+            ProgressBar.drawCanvas4()
+        }
+        if cellsScrolled == 5 {
+            ProgressBar.drawCanvas5()
         }
     }
     

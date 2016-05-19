@@ -25,7 +25,6 @@
 		4AA0A5911CEC4D16000F1212 /* techcrunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5881CEC4D16000F1212 /* techcrunch.png */; };
 		4AA0A5921CEC4D16000F1212 /* newyorktimes.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A5891CEC4D16000F1212 /* newyorktimes.png */; };
 		4AA0A5931CEC4D16000F1212 /* medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58A1CEC4D16000F1212 /* medium.png */; };
-		4AA0A5941CEC4D16000F1212 /* mashable.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58B1CEC4D16000F1212 /* mashable.svg */; };
 		4AA0A5951CEC4D16000F1212 /* lifehacker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58C1CEC4D16000F1212 /* lifehacker.png */; };
 		4AA0A5961CEC4D16000F1212 /* gizmodo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58D1CEC4D16000F1212 /* gizmodo.png */; };
 		4AA0A5971CEC4D16000F1212 /* engadget.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58E1CEC4D16000F1212 /* engadget.png */; };
@@ -38,6 +37,7 @@
 		C33642EE1CE40059002D03CA /* Bullish-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642EB1CE40059002D03CA /* Bullish-100.png */; };
 		C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642EC1CE40059002D03CA /* Hearts-100.png */; };
 		C33642F01CE40059002D03CA /* Settings-100.png in Resources */ = {isa = PBXBuildFile; fileRef = C33642ED1CE40059002D03CA /* Settings-100.png */; };
+		C34A15121CED3A28008259A5 /* mashable.png in Resources */ = {isa = PBXBuildFile; fileRef = C34A15111CED3A28008259A5 /* mashable.png */; };
 		C3C62B4A1CD1F0EE00A3FB58 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */; };
 		C3C62B4C1CD1F22700A3FB58 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */; };
 		C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */; };
@@ -79,7 +79,6 @@
 		4AA0A5881CEC4D16000F1212 /* techcrunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techcrunch.png; sourceTree = "<group>"; };
 		4AA0A5891CEC4D16000F1212 /* newyorktimes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newyorktimes.png; sourceTree = "<group>"; };
 		4AA0A58A1CEC4D16000F1212 /* medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium.png; sourceTree = "<group>"; };
-		4AA0A58B1CEC4D16000F1212 /* mashable.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mashable.svg; sourceTree = "<group>"; };
 		4AA0A58C1CEC4D16000F1212 /* lifehacker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lifehacker.png; sourceTree = "<group>"; };
 		4AA0A58D1CEC4D16000F1212 /* gizmodo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gizmodo.png; sourceTree = "<group>"; };
 		4AA0A58E1CEC4D16000F1212 /* engadget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engadget.png; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		C33642EB1CE40059002D03CA /* Bullish-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bullish-100.png"; sourceTree = "<group>"; };
 		C33642EC1CE40059002D03CA /* Hearts-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hearts-100.png"; sourceTree = "<group>"; };
 		C33642ED1CE40059002D03CA /* Settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-100.png"; sourceTree = "<group>"; };
+		C34A15111CED3A28008259A5 /* mashable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mashable.png; sourceTree = "<group>"; };
 		C3C62B491CD1F0EE00A3FB58 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
 		C3C62B4B1CD1F22700A3FB58 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLogo.png; sourceTree = "<group>"; };
@@ -200,12 +200,12 @@
 				4AA0A5881CEC4D16000F1212 /* techcrunch.png */,
 				4AA0A5891CEC4D16000F1212 /* newyorktimes.png */,
 				4AA0A58A1CEC4D16000F1212 /* medium.png */,
-				4AA0A58B1CEC4D16000F1212 /* mashable.svg */,
 				4AA0A58C1CEC4D16000F1212 /* lifehacker.png */,
 				4AA0A58D1CEC4D16000F1212 /* gizmodo.png */,
 				4AA0A58E1CEC4D16000F1212 /* engadget.png */,
 				C3C62B4D1CD1F53600A3FB58 /* sampleLogo.png */,
 				C3C62B4F1CD1F57500A3FB58 /* sampleStory.jpg */,
+				C34A15111CED3A28008259A5 /* mashable.png */,
 				C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */,
 				C3EEBD301CD1FE5100E638CF /* list-fat-7.png */,
 				C3EEBD311CD1FE5100E638CF /* paper-box-7.png */,
@@ -267,7 +267,7 @@
 				TargetAttributes = {
 					4A525CF71CD1B7FA00CF3D67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = E7SDH3DXWL;
+						DevelopmentTeam = KDS74D59Z7;
 					};
 				};
 			};
@@ -304,7 +304,6 @@
 				4AA0A5931CEC4D16000F1212 /* medium.png in Resources */,
 				C3EEBD2F1CD1FE0D00E638CF /* heart-7.png in Resources */,
 				C33642E81CE3FFEC002D03CA /* Bullish-100@2x.png in Resources */,
-				4AA0A5941CEC4D16000F1212 /* mashable.svg in Resources */,
 				C3C62B4E1CD1F53600A3FB58 /* sampleLogo.png in Resources */,
 				4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */,
 				4A525D091CD1B7FA00CF3D67 /* LaunchScreen.storyboard in Resources */,
@@ -315,6 +314,7 @@
 				C3EEBD321CD1FE5100E638CF /* list-fat-7.png in Resources */,
 				C3C62B501CD1F57500A3FB58 /* sampleStory.jpg in Resources */,
 				4A525D061CD1B7FA00CF3D67 /* Assets.xcassets in Resources */,
+				C34A15121CED3A28008259A5 /* mashable.png in Resources */,
 				4AA0A5911CEC4D16000F1212 /* techcrunch.png in Resources */,
 				C33642EF1CE40059002D03CA /* Hearts-100.png in Resources */,
 				C33642F01CE40059002D03CA /* Settings-100.png in Resources */,
@@ -507,7 +507,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SerendipityLabs.Catch-Up";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CatchUp/CatchUp-Bridging-Header.h";
@@ -525,7 +525,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SerendipityLabs.Catch-Up";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CatchUp/CatchUp-Bridging-Header.h";

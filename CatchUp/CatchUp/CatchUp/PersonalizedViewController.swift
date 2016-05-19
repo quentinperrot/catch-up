@@ -60,8 +60,8 @@ class PersonalizedViewController: UIViewController {
 //        self.view.addSubview(progessInit.view)
         
         
-        makeProgressBar(1)
-             
+//        makeProgressBar(1)
+        
 
         // Do any additional setup after loading the view.
     }

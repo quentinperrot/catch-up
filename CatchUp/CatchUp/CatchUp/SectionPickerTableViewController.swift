@@ -19,9 +19,9 @@ class SectionPickerTableViewController: UITableViewController {
         "Engadget": "engadget.png",
         "Gizmodo": "gizmodo.png",
         "LifeHacker": "lifehacker.png",
-        "Mashable": "mashable.svg",
+        "Mashable": "mashable.png",
         "Medium": "medium.png",
-        "New York Times Technology": "newyorktimes.png",
+        "NYT Tech": "newyorktimes.png",
         "TechCrunch": "techcrunch.png",
         "TechRadar": "techradar.png",
         "Wired": "wired.png"]
@@ -30,6 +30,9 @@ class SectionPickerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = 100
+
         
         self.tableView.allowsMultipleSelection = true
 
@@ -64,11 +67,21 @@ class SectionPickerTableViewController: UITableViewController {
         var sectionNames = Array(sectionsDictionary.keys)
         let sectionName = sectionNames[indexPath.row]
         let sectionImage = UIImage(named: sectionsDictionary[sectionName]!)
-        print(sectionsDictionary[sectionName]!)
-        print(sectionImage)
-        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFit
+//        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFill
+//        cell.imageView?.contentMode = UIViewContentMode.Center
+//        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         cell.imageView?.image = sectionImage
 
+        print(cell.imageView?.frame.width)
+        
+        let itemSize = CGSizeMake(345, 80)
+        UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.mainScreen().scale)
+        let imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height)
+        cell.imageView?.image?.drawInRect(imageRect)
+        cell.imageView?.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        
         return cell
     }
     
