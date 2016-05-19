@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Launch Flurry
         Flurry.startSession("Z744SZTPKFR635SZ9MB9")
-        Flurry.logEvent("Application_Launched")
+        Flurry.logEvent("Application_Launched", timed: true)
         
         // Make sure to pre-register your keys before starting Optimizely
         Optimizely.preregisterBlockKey(sectionNumberBlockKey)
@@ -59,6 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+        Flurry.logEvent("Application_Closed")
+        Flurry.endTimedEvent("Application_Launched", withParameters: nil)
+
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

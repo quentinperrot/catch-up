@@ -270,6 +270,10 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                 //
                 //                                    overlay.addSubview(imageView)
                 
+                // Log User Caught Up in Given Source 
+                let source = ["Source": String(self.title!)]
+                Flurry.logEvent("User_Caught_Up", withParameters: source)
+                
                 self.view.addSubview(self.overlayView!)
                 
                 
@@ -281,12 +285,14 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                 notie.leftButtonAction = {
                     // Add your left button action here
                     notie.dismiss()
+                    Flurry.logEvent("User_Received_Loop_Animation")
                 }
                 
                 notie.rightButtonAction = {
                     self.tableRowNumber += 5
                     self.tableView.reloadData()
                     notie.dismiss()
+                    Flurry.logEvent("User_Requested_More_Articles", withParameters: source)
                 }
                 
                     notie.show()
