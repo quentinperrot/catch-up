@@ -74,7 +74,7 @@ class SectionPickerTableViewController: UITableViewController {
 
         print(cell.imageView?.frame.width)
         
-        let itemSize = CGSizeMake(150, 30)
+        let itemSize = CGSizeMake(120, 20)
         UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.mainScreen().scale)
         let imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height)
         cell.imageView?.image?.drawInRect(imageRect)

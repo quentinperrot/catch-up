@@ -41,14 +41,17 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         "New York Times Technology": "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
         "TechCrunch": "http://techcrunch.com/feed/",
         "TechRadar": "http://feeds.webservice.techradar.com/us/rss",
-        "Wired": "http://www.wired.com/feed/"]
+        "Wired": "http://www.wired.com/feed/",
+        "Top News": "https://news.google.com/news?cf=all&hl=en&ned=us&output=rss",
+        "Viral News": "http://rss.nytimes.com/services/xml/rss/nyt/MostShared.xml",
+        "Interesting": "https://feeds.feedburner.com/InterestingThingOfTheDay"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.rowHeight = 425
         self.edgesForExtendedLayout = UIRectEdge.All
-        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:50.0, right: 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:0.0, right: 0.0)
         
         // Parser commands
         let url = NSURL(string: sectionsDictionary[self.title!]!)
@@ -65,11 +68,6 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.cache = NSCache()
         
         makeProgressBar(1)
-        
-        
-        
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -220,43 +218,56 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
             var fixedFrame = self.testView.frame;
             fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
             self.testView.frame = fixedFrame;
-            cellsScrolled = 1
             
             
             
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 875) {
-                testView.removeFromSuperview()
-                makeProgressBar(2)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+                if (cellsScrolled <= 2) {
+                    testView.removeFromSuperview()
+                    makeProgressBar(2)
+                    var fixedFrame = self.testView.frame;
+                    fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                    self.testView.frame = fixedFrame;
+                    cellsScrolled = 2
+                }
             }
             
             
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1310) {
-                testView.removeFromSuperview()
-                makeProgressBar(3)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+                if (cellsScrolled <= 3) {
+                    testView.removeFromSuperview()
+                    makeProgressBar(3)
+                    var fixedFrame = self.testView.frame;
+                    fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                    self.testView.frame = fixedFrame;
+                    cellsScrolled = 3
+                }
             }
             
             
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1725) {
-                testView.removeFromSuperview()
-                makeProgressBar(4)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+                if (cellsScrolled <= 4) {
+                    testView.removeFromSuperview()
+                    makeProgressBar(4)
+                    cellsScrolled = 4
+                    var fixedFrame = self.testView.frame;
+                    fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                    self.testView.frame = fixedFrame;
+                    print(cellsScrolled)
+                }
             }
             
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
-                print(scrollView.contentSize.height)
-                testView.removeFromSuperview()
-                makeProgressBar(5)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+                if (cellsScrolled <= 5) {
+                    print(scrollView.contentSize.height)
+                    testView.removeFromSuperview()
+                    makeProgressBar(5)
+                    cellsScrolled = 5
+                    var fixedFrame = self.testView.frame;
+                    fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+                    self.testView.frame = fixedFrame;
+                    print(cellsScrolled)
+                }
                 
                 
                 // CAUGHT UP
@@ -284,7 +295,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                             
                             // Log Event
                             Flurry.logEvent("User_Received_Loop_Animation")
-
+                            
                             notie.dismiss()
                             
                             
