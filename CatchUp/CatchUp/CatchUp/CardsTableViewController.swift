@@ -103,7 +103,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         var imageLink = ""
         
         // Set Publication
-        
+        cell.publicationLabel?.text = self.title
         
         
         // Find Date
@@ -158,7 +158,6 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
             }
         }
         
-        cell.publicationLabel?.text = self.title
         
         return cell
     }
@@ -183,6 +182,10 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
             let svc = SFSafariViewController(URL: NSURL(string: link)!)
             svc.delegate = self
             self.presentViewController(svc, animated: true, completion: nil)
+            
+            // Log event
+            let articleParams = ["Source Name": String(self.title!)]
+            Flurry.logEvent("Article_Read", withParameters: articleParams)
         }
     }
     

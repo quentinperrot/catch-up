@@ -2,6 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FeedlyKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Flurry-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NXOAuth2Client.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CatchUp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>14BCDB47218880770F678DAE47DA68BD</key>
@@ -9,12 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33D6808C12DC5C06880057CF8DD99BB6</key>
+		<key>5E2060A6AE6C46CDA0BA36F24FF908FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E2060A6AE6C46CDA0BA36F24FF908FC</key>
+		<key>63032474C4AB56D648B39982530DFD55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -25,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>9F98AEF799D59E11738E3F53F086D1C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDFE8A21749E6134C80182035F6301BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

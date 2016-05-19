@@ -28,6 +28,9 @@
 		4AA0A5951CEC4D16000F1212 /* lifehacker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58C1CEC4D16000F1212 /* lifehacker.png */; };
 		4AA0A5961CEC4D16000F1212 /* gizmodo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58D1CEC4D16000F1212 /* gizmodo.png */; };
 		4AA0A5971CEC4D16000F1212 /* engadget.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0A58E1CEC4D16000F1212 /* engadget.png */; };
+		4AA0A5991CED9DA8000F1212 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA0A5981CED9DA8000F1212 /* Security.framework */; };
+		4AA0A59B1CED9DAF000F1212 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA0A59A1CED9DAF000F1212 /* SystemConfiguration.framework */; };
+		4AA0A59E1CED9E48000F1212 /* libFlurry_7.6.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA0A59D1CED9E48000F1212 /* libFlurry_7.6.3.a */; };
 		4AC5EF311CD1DF4600EDCD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */; };
 		A2EE2A08A524263370CC61AC /* Pods_CatchUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */; };
 		C30B493B1CD2238D00A448EF /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B493A1CD2238D00A448EF /* SweetAlert.swift */; };
@@ -82,7 +85,12 @@
 		4AA0A58C1CEC4D16000F1212 /* lifehacker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lifehacker.png; sourceTree = "<group>"; };
 		4AA0A58D1CEC4D16000F1212 /* gizmodo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gizmodo.png; sourceTree = "<group>"; };
 		4AA0A58E1CEC4D16000F1212 /* engadget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engadget.png; sourceTree = "<group>"; };
+		4AA0A5981CED9DA8000F1212 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4AA0A59A1CED9DAF000F1212 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4AA0A59C1CED9E48000F1212 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		4AA0A59D1CED9E48000F1212 /* libFlurry_7.6.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.6.3.a; sourceTree = "<group>"; };
 		4AC5EF301CD1DF4600EDCD10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4AFE9EB71CEDA00B003DA753 /* CatchUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatchUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BC10FDF9C192CCBBC8FA529 /* Pods-CatchUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.release.xcconfig"; sourceTree = "<group>"; };
 		8675EF76CE4433BC7FAFF77B /* Pods-CatchUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatchUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatchUp/Pods-CatchUp.debug.xcconfig"; sourceTree = "<group>"; };
 		C30B493A1CD2238D00A448EF /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 		C3DBE04C1CE41264009F699D /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C3DBE04E1CE414A3009F699D /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C3E076741CD1E22000AA6CCB /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
-		C3EEBD261CD1FC6000E638CF /* CatchUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatchUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3EEBD2E1CD1FE0D00E638CF /* heart-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-7.png"; sourceTree = "<group>"; };
 		C3EEBD301CD1FE5100E638CF /* list-fat-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-fat-7.png"; sourceTree = "<group>"; };
 		C3EEBD311CD1FE5100E638CF /* paper-box-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper-box-7.png"; sourceTree = "<group>"; };
@@ -118,6 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA0A59B1CED9DAF000F1212 /* SystemConfiguration.framework in Frameworks */,
+				4AA0A5991CED9DA8000F1212 /* Security.framework in Frameworks */,
+				4AA0A59E1CED9E48000F1212 /* libFlurry_7.6.3.a in Frameworks */,
 				A2EE2A08A524263370CC61AC /* Pods_CatchUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +156,7 @@
 		4A525CFA1CD1B7FA00CF3D67 /* CatchUp */ = {
 			isa = PBXGroup;
 			children = (
+				4AA0A59F1CED9E57000F1212 /* Instrumentation */,
 				4A525D201CD1B8B100CF3D67 /* Core Data */,
 				4A525CFB1CD1B7FA00CF3D67 /* AppDelegate.swift */,
 				4A525D231CD1BC2B00CF3D67 /* SectionPickerTableViewController.swift */,
@@ -166,7 +177,6 @@
 				4A525D051CD1B7FA00CF3D67 /* Assets.xcassets */,
 				4A525D071CD1B7FA00CF3D67 /* LaunchScreen.storyboard */,
 				4A525D0A1CD1B7FA00CF3D67 /* Info.plist */,
-				C3EEBD261CD1FC6000E638CF /* CatchUp-Bridging-Header.h */,
 			);
 			path = CatchUp;
 			sourceTree = "<group>";
@@ -181,6 +191,16 @@
 				4A525D021CD1B7FA00CF3D67 /* CatchUp.xcdatamodeld */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		4AA0A59F1CED9E57000F1212 /* Instrumentation */ = {
+			isa = PBXGroup;
+			children = (
+				4AA0A59C1CED9E48000F1212 /* Flurry.h */,
+				4AA0A59D1CED9E48000F1212 /* libFlurry_7.6.3.a */,
+				4AFE9EB71CEDA00B003DA753 /* CatchUp-Bridging-Header.h */,
+			);
+			name = Instrumentation;
 			sourceTree = "<group>";
 		};
 		7A7F455B6FE2B656C3BB4868 /* Pods */ = {
@@ -227,6 +247,8 @@
 		E7B4122822097FA98B091052 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4AA0A59A1CED9DAF000F1212 /* SystemConfiguration.framework */,
+				4AA0A5981CED9DA8000F1212 /* Security.framework */,
 				451A89C49D153F145D06FF28 /* Pods_CatchUp.framework */,
 			);
 			name = Frameworks;
@@ -267,7 +289,7 @@
 				TargetAttributes = {
 					4A525CF71CD1B7FA00CF3D67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = KDS74D59Z7;
+						DevelopmentTeam = E7SDH3DXWL;
 					};
 				};
 			};
@@ -507,6 +529,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CatchUp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -525,6 +551,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CatchUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CatchUp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipityLabs.CatchUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

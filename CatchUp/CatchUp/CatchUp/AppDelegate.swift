@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Optimizely.enableEditor()
         Optimizely.startOptimizelyWithAPIToken("AANQAQsBgbV02iVEYEeYyaoDiiVBleW5~5876962274", launchOptions:launchOptions)
         
+        // Launch Flurry
+        Flurry.startSession("Z744SZTPKFR635SZ9MB9")
+        Flurry.logEvent("Application_Launched")
+        
         // Make sure to pre-register your keys before starting Optimizely
         Optimizely.preregisterBlockKey(sectionNumberBlockKey)
         
