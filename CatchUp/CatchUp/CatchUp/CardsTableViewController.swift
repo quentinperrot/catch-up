@@ -276,7 +276,15 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                         notie.leftButtonTitle = "Great!"
                         notie.rightButtonTitle = "Load More News"
                         
+                        // Log User Caught Up in Given Source
+                        let source = ["Source": String(self.title!)]
+                        Flurry.logEvent("User_Caught_Up", withParameters: source)
+                        
                         notie.leftButtonAction = {
+                            
+                            // Log Event
+                            Flurry.logEvent("User_Received_Loop_Animation")
+
                             notie.dismiss()
                             
                             
@@ -299,6 +307,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                             self.tableRowNumber += 5
                             self.tableView.reloadData()
                             notie.dismiss()
+                            Flurry.logEvent("User_Requested_More_Articles", withParameters: source)
                         }
                         
                         notie.show()
