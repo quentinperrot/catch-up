@@ -18,8 +18,9 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     var task: NSURLSessionDownloadTask!
     var session: NSURLSession!
     var cache: NSCache!
-    
+    var notieShown = 0
     var testView: ProgressView!
+    var overlayView: UIView?
     
     var xmlParser : XMLParser!
     
@@ -47,7 +48,7 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         
         self.tableView.rowHeight = 425
         self.edgesForExtendedLayout = UIRectEdge.All
-        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:0.0, right: 0.0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom:50.0, right: 0.0)
         
         // Parser commands
         let url = NSURL(string: sectionsDictionary[self.title!]!)
@@ -64,6 +65,8 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.cache = NSCache()
         
         makeProgressBar(1)
+        
+        
         
     }
     
@@ -201,82 +204,98 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.testView.frame = fixedFrame;
         cellsScrolled = 1
         
+        if (overlayView != nil) {
+            var overlayFixed = self.overlayView!.frame
+            fixedFrame.origin.y = scrollView.contentOffset.y
+            self.overlayView!.frame = fixedFrame
+        }
+        
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 875) {
-                testView.removeFromSuperview()
-                makeProgressBar(2)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+            testView.removeFromSuperview()
+            makeProgressBar(2)
+            var fixedFrame = self.testView.frame;
+            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+            self.testView.frame = fixedFrame;
         }
         
         
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1310) {
-                testView.removeFromSuperview()
-                makeProgressBar(3)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+            testView.removeFromSuperview()
+            makeProgressBar(3)
+            var fixedFrame = self.testView.frame;
+            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+            self.testView.frame = fixedFrame;
         }
         
         
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 1725) {
-                testView.removeFromSuperview()
-                makeProgressBar(4)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
+            testView.removeFromSuperview()
+            makeProgressBar(4)
+            var fixedFrame = self.testView.frame;
+            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+            self.testView.frame = fixedFrame;
         }
         
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= 2120) {
             print(scrollView.contentSize.height)
-                testView.removeFromSuperview()
-                makeProgressBar(5)
-                var fixedFrame = self.testView.frame;
-                fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
-                self.testView.frame = fixedFrame;
-    
-                
-                // CAUGHT UP
-                
-                            let seconds = 2.3
-                            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-                            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                
-                            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                
-                                let refreshAlert = UIAlertController(title: "You're Caught Up!", message: "You got to the end of that section! Congratulations on brushing up on the current news.", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                                refreshAlert.addAction(UIAlertAction(title: "Great!", style: .Default, handler: { (action: UIAlertAction!) in
-//                                    var overlay : UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
-//                                    
-//                                    let imageName = "newyorktimes.png"
-//                                    let image = UIImage(named: imageName)
-//                                    let imageView = UIImageView(image: image!)
-//                                    
-//                                    imageView.frame = CGRectMake(0, 0, 300, 300) // set up according to your requirements
-//                                    
-//                                    var doneBtn : UIButton = UIButton(frame: CGRectMake(0, 0, 100, 100)) // set up according to your requirements
-//                                    doneBtn.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
-//                                    
-//                                    overlay.addSubview(imageView)
-//                                    overlay.addSubview(doneBtn)
-//                                    
-//                                    self.view.addSubview(overlay)
-                                }))
-                
-                                refreshAlert.addAction(UIAlertAction(title: "Load More News", style: .Default, handler: { (action: UIAlertAction!) in
-                                    self.tableRowNumber += 5
-                                    self.tableView.reloadData()
-                                }))
-                
-                                self.presentViewController(refreshAlert, animated: true, completion: nil)
-                
-                            })
+            testView.removeFromSuperview()
+            makeProgressBar(5)
+            var fixedFrame = self.testView.frame;
+            fixedFrame.origin.y = 560 + scrollView.contentOffset.y;
+            self.testView.frame = fixedFrame;
             
+            
+            // CAUGHT UP
+            
+            let seconds = 1.3
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            if (self.notieShown == 0) {
+
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                self.overlayView = UIView(frame: CGRectMake(0, scrollView.contentOffset.y, self.view.frame.size.width, self.view.frame.size.height))
                 
-                // END CAUGHT UP
+                //                                    let imageName = "newyorktimes.png"
+                //                                    let image = UIImage(named: imageName)
+                //                                    let imageView = UIImageView(image: image!)
+                //
+                //                                    imageView.frame = CGRectMake(0, 0, 300, 300) // set up according to your requirements
+                //
+                //                                    var doneBtn : UIButton = UIButton(frame: CGRectMake(0, 0, 100, 100)) // set up according to your requirements
+                //                                    doneBtn.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+                //
+                //                                    overlay.addSubview(imageView)
+                
+                self.view.addSubview(self.overlayView!)
                 
                 
+                let notie = Notie(view: self.overlayView!, message: "You're all caught up with \(self.title!)!", style: .Confirm)
+                
+                notie.leftButtonTitle = "Great!"
+                notie.rightButtonTitle = "Load More News"
+                
+                notie.leftButtonAction = {
+                    // Add your left button action here
+                    notie.dismiss()
+                }
+                
+                notie.rightButtonAction = {
+                    self.tableRowNumber += 5
+                    self.tableView.reloadData()
+                    notie.dismiss()
+                }
+                
+                    notie.show()
+                
+            })
+                self.notieShown = 1
+            }
+            
+            
+            // END CAUGHT UP
+            
+            
         }
     }
     

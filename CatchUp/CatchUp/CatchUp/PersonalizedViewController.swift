@@ -45,7 +45,7 @@ class PersonalizedViewController: UIViewController {
             .UseMenuLikeSegmentedControl(false),
             .MenuItemSeparatorPercentageHeight(0.1),
             .ScrollMenuBackgroundColor(colorBar),
-            .UnselectedMenuItemLabelColor(colorUnselected),
+            .UnselectedMenuItemLabelColor(UIColor.whiteColor()),
             .MenuHeight(50)
         ]
         
