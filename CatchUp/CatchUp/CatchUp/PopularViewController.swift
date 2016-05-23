@@ -28,6 +28,8 @@ class PopularViewController : UIViewController {
         // Make sure the title property of all view controllers is set
         // Example:
         
+        // Log Event 
+        
         let allSectionsChosen = ["Top News", "Viral News", "Interesting"]
         
         for section in allSectionsChosen {
@@ -67,6 +69,8 @@ class PopularViewController : UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         // Array to keep track of controllers in page menu
@@ -77,6 +81,10 @@ class PopularViewController : UIViewController {
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
         // Example:
+        
+        // Log Event 
+        Flurry.logEvent("User_Opened_Popular_Tab")
+
         
         let allSectionsChosen = ["Top News", "Viral News", "Interesting"]
         

@@ -78,6 +78,9 @@ class PersonalizedViewController: UIViewController {
         // Make sure the title property of all view controllers is set
         // Example:
         
+        // Log Event 
+        Flurry.logEvent("User_Opened_Source_Tab")
+        
         let allSectionsChosen = defaults.objectForKey("sections") as! [String]
         
         for section in allSectionsChosen {
