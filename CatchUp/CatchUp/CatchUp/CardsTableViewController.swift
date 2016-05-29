@@ -68,6 +68,13 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
         self.cache = NSCache()
         
         makeProgressBar(1)
+        
+//        let notification:UILocalNotification = UILocalNotification()
+//        notification.category = "Your Sources"
+//        notification.alertAction = "Catch up now!"
+//        notification.alertBody = "Now's a good time to see what's been going on at Medium.com!"
+//        notification.fireDate = NSDate().dateByAddingSeconds(30)
+//        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,6 +111,8 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> CardTableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath) as! CardTableViewCell
         let currentDictionary = xmlParser.arrParsedData[indexPath.row] as Dictionary<String, String>
         var imageLinks = [String]()
@@ -295,15 +304,20 @@ class CardsTableViewController: UITableViewController, SFSafariViewControllerDel
                             
                             notie.dismiss()
                             
-                            let bgName = "blueBG.png"
+                            let bgArrayDict:[String:String] = ["start":"blueBG.png", "start1": "greenBG.png", "start2": "darkblueBG.png"]
+                            let index: Int = Int(arc4random_uniform(UInt32(bgArrayDict.count)))
+                            let randomVal = Array(bgArrayDict)[index]
+                        
+                            
+                            let bgName = randomVal.1
                             let bgImage = UIImage(named: bgName)
                             let bgView = UIImageView(image: bgImage!)
                             bgView.frame = CGRectMake(0, 0, 375, 660) // set up according to your requirements
                             self.overlayView!.addSubview(bgView)
 
-                            let imageName = UIImage.gifWithName("start")
+                            let imageName = UIImage.gifWithName(randomVal.0)
                             let imageView = UIImageView(image: imageName!)
-                            imageView.frame = CGRectMake(0, 120, 370, 300) // set up according to your requirements
+                            imageView.frame = CGRectMake(0, 120, 375, 300) // set up according to your requirements
                             self.overlayView!.addSubview(imageView)
                             
                             self.caughtUp = 1

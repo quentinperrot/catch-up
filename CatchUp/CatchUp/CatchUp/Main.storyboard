@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XYl-l3-uyZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Sources-->
         <scene sceneID="YCZ-4M-5bF">
             <objects>
-                <tableViewController id="W7N-3l-T9n" customClass="SectionPickerTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="W7N-3l-T9n" customClass="SectionPickerTableViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="dJV-3T-xfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
         <!--Personal-->
         <scene sceneID="aeV-sZ-xc8">
             <objects>
-                <viewController title="Personal" id="sex-nV-ibM" customClass="PersonalizedViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Personal" id="sex-nV-ibM" customClass="PersonalizedViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sYQ-wY-FBH"/>
                         <viewControllerLayoutGuide type="bottom" id="QVl-MX-yPu"/>
@@ -103,14 +103,14 @@
         <!--cardsViewController-->
         <scene sceneID="akm-cE-Y3t">
             <objects>
-                <tableViewController storyboardIdentifier="cardsViewController" title="cardsViewController" id="u8N-Oj-DNa" customClass="CardsTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="cardsViewController" title="cardsViewController" id="u8N-Oj-DNa" customClass="CardsTableViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TCP-Ui-lnc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="428" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="CatchUp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="428" id="ciP-UC-OoO" customClass="CardTableViewCell" customModule="Loop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="428"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciP-UC-OoO" id="Cpw-S0-sug">
@@ -140,18 +140,26 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Publication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-BQ-pDO">
-                                            <rect key="frame" x="15" y="396" width="124" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Publication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-BQ-pDO">
+                                            <rect key="frame" x="125" y="396" width="124" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Hours Ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-XD-en6">
-                                            <rect key="frame" x="235" y="396" width="124" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Hours Ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-XD-en6">
+                                            <rect key="frame" x="15" y="397" width="124" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-O2-Yhf">
+                                            <rect key="frame" x="330" y="395" width="29" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <state key="normal" title="Share"/>
+                                            <connections>
+                                                <action selector="shareClicked:" destination="u8N-Oj-DNa" eventType="touchUpInside" id="I48-kJ-aBd"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.86626717931937169" green="0.86626717931937169" blue="0.86626717931937169" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,7 +190,7 @@
         <!--Settings-->
         <scene sceneID="PIC-Za-HyD">
             <objects>
-                <viewController title="Settings" id="E76-MM-8vE" customClass="PopularViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="E76-MM-8vE" customClass="PopularViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XvQ-NG-gXC"/>
                         <viewControllerLayoutGuide type="bottom" id="7Zb-kI-N0D"/>
@@ -218,7 +226,7 @@
         <!--View Controller-->
         <scene sceneID="nYJ-ni-f8P">
             <objects>
-                <viewController id="XYl-l3-uyZ" customClass="ViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XYl-l3-uyZ" customClass="ViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Mn-Sz-aPB"/>
                         <viewControllerLayoutGuide type="bottom" id="mPw-w9-PP6"/>
@@ -276,7 +284,7 @@
         <!--Sources-->
         <scene sceneID="sE3-kp-MXd">
             <objects>
-                <tableViewController id="7Le-sq-kr4" customClass="SectionPickerTableViewController" customModule="CatchUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7Le-sq-kr4" customClass="SectionPickerTableViewController" customModule="Loop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="vfi-yn-PeO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
