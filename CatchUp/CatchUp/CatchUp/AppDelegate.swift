@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  CatchUp
 //
@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Make sure to pre-register your keys before starting Optimizely
         Optimizely.preregisterBlockKey(sectionNumberBlockKey)
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
         
         return true
     }

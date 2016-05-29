@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A525CF71CD1B7FA00CF3D67"
-               BuildableName = "CatchUp.app"
+               BuildableName = "Loop.app"
                BlueprintName = "CatchUp"
                ReferencedContainer = "container:CatchUp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A525CF71CD1B7FA00CF3D67"
-            BuildableName = "CatchUp.app"
+            BuildableName = "Loop.app"
             BlueprintName = "CatchUp"
             ReferencedContainer = "container:CatchUp.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A525CF71CD1B7FA00CF3D67"
-            BuildableName = "CatchUp.app"
+            BuildableName = "Loop.app"
             BlueprintName = "CatchUp"
             ReferencedContainer = "container:CatchUp.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A525CF71CD1B7FA00CF3D67"
-            BuildableName = "CatchUp.app"
+            BuildableName = "Loop.app"
             BlueprintName = "CatchUp"
             ReferencedContainer = "container:CatchUp.xcodeproj">
          </BuildableReference>
